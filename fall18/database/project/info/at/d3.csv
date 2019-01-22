@@ -1,0 +1,253 @@
+BRAND_ID,BRAND_NAME,BRAND_TYPE,PROD_BASE,PROD_CATEGORY,PROD_DESCRIPT,PROD_MIN,PROD_PRICE,PROD_QOH,PROD_SKU,PROD_TYPE,VEND_CITY,VEND_ID,VEND_NAME,VEND_STATE,VEND_STREET,VEND_ZIP
+28,OLDE TYME QUALITY,CONTRACTOR,Water,Top Coat,"Dry Fall, Latex, Semi-Gloss (MPI Gloss Level 5)",15,21.99,110,1010-MIW,Interior,Sweek Hollow,5,National Wholesale Consolidated,VT,1185 BIGLERVILLE CIRCLE,5483
+35,LE MODE,PREMIUM,Water,Top Coat,"Elastomeric, Exterior, Industrial Grade, Water Based",25,62.99,22,1021-MTI,Exterior,South Miami,12,International Decor Partners,FL,355 WILDWOOD DRIVE,33143
+35,LE MODE,PREMIUM,Solvent,Top Coat,"Traffic Marking Paint, Alkyd",40,6.59,10,1045-DUY,Exterior,Sweek Hollow,5,National Wholesale Consolidated,VT,1185 BIGLERVILLE CIRCLE,5483
+30,LONG HAUL,CONTRACTOR,Solvent,Primer,"Primer, Galvanized Metal, Cementitious",10,14.89,21,1067-KBB,Interior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+25,STUTTENFURST,CONTRACTOR,Water,Top Coat,"Light Industrial Coating, Exterior, Water Based ('eggshell-like' - MPI Gloss Level 3) ",25,23.29,43,1074-VVJ,Exterior,S Plymouth,19,S Plymouth Solubles Workshop,NY,1874 LAWLOR CIRCLE,13844
+23,FORESTERS BEST,VALUE,Solvent,Top Coat,"Varnish, Interior, Semi-Gloss ",40,14.59,94,1078-QXL,Interior,Grand Ledge,7,Kenny Paints Workshop,MI,1286 RICHARD EVELYN BYRD STREET,48837
+35,LE MODE,PREMIUM,Solvent,Primer,"Primer, Epoxy, Anti-Corrosive, for Metal",40,14.99,57,1099-WFZ,Interior,Linden,17,Linden Consolidated,MI,1353 STEPHEN CIRCLE,48451
+27,HOME COMFORT,CONTRACTOR,Solvent,Primer,Shellac,15,11.99,116,1143-RGX,Interior,Beebe Plain,2,Warren Paints Consolidated,VT,377 LONGHORN STREET,5823
+35,LE MODE,PREMIUM,Solvent,Primer,"Primer, Alkyd, Quick Dry, for Metal",10,11.99,44,1150-MMR,Interior,Pine Hill,6,Pine Hill Chemical Warehouse,PA,1777 EASTWIND COURT,17901
+28,OLDE TYME QUALITY,CONTRACTOR,Solvent,Top Coat,"Polyurethane, Moisture Cured, Pigmented, Intermediate Coat",20,14.99,116,1153-AWY,Interior,Grand Ledge,7,Kenny Paints Workshop,MI,1286 RICHARD EVELYN BYRD STREET,48837
+28,OLDE TYME QUALITY,CONTRACTOR,Water,Top Coat,"Latex, Exterior, Gloss (MPI Gloss Level 6)",15,23.59,45,1198-STR,Exterior,Huntington,9,Donahue Solubles of West Virginia,WV,382 FLORENCE CIRCLE,25700
+25,STUTTENFURST,CONTRACTOR,Solvent,Top Coat,"Stain, Semi-Transparent, for Interior Wood",20,20.99,91,1200-KBU,Interior,Brookfield,10,Lambert Decor of New Hampshire,NH,1839 DEMEURE PLACE,3872
+35,LE MODE,PREMIUM,Water,Top Coat,"Fire Retardant Coating, Latex, Interior, Flat (ULC Approved)",25,35.99,49,1203-AIS,Interior,Baltimore,8,Baltimore Paints Consolidated,MD,222 SEWARD 34TH RAMP,21222
+33,BINDER PRIME,PREMIUM,Solvent,Sealer,"Alkyd, Sanding Sealer, Clear",25,23.29,54,1336-FVM,Interior,Irvington,20,Irvington Wholesale Workshop,KY,527 ELDERBERRY STREET,40146
+29,BUSTERS,VALUE,Water,Sealer,"Sealer, Water Based, for Concrete Floors",5,42.99,56,1403-TUY,Interior,Irvington,20,Irvington Wholesale Workshop,KY,527 ELDERBERRY STREET,40146
+27,HOME COMFORT,CONTRACTOR,Solvent,Top Coat,"Heat Resistant Coating, (Up to 205°C/402°F), MPI Gloss Level 5-6 ",10,23.99,129,1433-MMY,Exterior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+30,LONG HAUL,CONTRACTOR,Water,Primer,"Primer Sealer, for Multicolor Systems",10,18.99,76,1485-NNI,Interior,Arlington,13,Boykin Chemical Workshop,VA,200 AERO AVENUE,22218
+33,BINDER PRIME,PREMIUM,Water,Top Coat,"Floor Paint, Latex, Low Gloss ",25,21.99,63,1504-LVK,Interior,Orchard Lake,22,Rivera Decor Partners,MI,1404 SEWARD NB ON TUDOR RAMP,48324
+29,BUSTERS,VALUE,Water,Top Coat,"Latex, Interior, High Performance Architectural, ('eggshell-like' - MPI Gloss Level 3)",5,34.49,124,1580-VCE,Interior,Linden,17,Linden Consolidated,MI,1353 STEPHEN CIRCLE,48451
+25,STUTTENFURST,CONTRACTOR,Water,Top Coat,"Light Industrial Coating, Exterior, Water Based, Semi-Gloss (MPI Gloss Level 5)",40,23.29,125,1663-CDD,Exterior,Sweek Hollow,5,National Wholesale Consolidated,VT,1185 BIGLERVILLE CIRCLE,5483
+33,BINDER PRIME,PREMIUM,Solvent,Filler,"Paste, Wood Filler",30,3.99,85,1747-XNI,Exterior,Orchard Lake,22,Rivera Decor Partners,MI,1404 SEWARD NB ON TUDOR RAMP,48324
+25,STUTTENFURST,CONTRACTOR,Water,Top Coat,"Latex, Exterior, High Build",10,12.59,24,1838-LZI,Exterior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+30,LONG HAUL,CONTRACTOR,Solvent,Top Coat,Epoxy Deck Coating (Slip-Resistant),40,22.59,98,1854-AFJ,Interior,Rowsburg,15,Unlimited Wholesale of Ohio,OH,454 WINDJAMMER CIRCLE,44866
+28,OLDE TYME QUALITY,CONTRACTOR,Water,Top Coat,"Latex, Exterior, Low Sheen (MPI Gloss Level 3-4)",25,24.99,52,1871-GWZ,Exterior,Laporte,11,Super Solubles of Pennsylvania,PA,1951 WEST 28TH COURT,18626
+30,LONG HAUL,CONTRACTOR,Solvent,Top Coat,"Fire Resistant Top Coat, for Interior Wood",10,78.49,120,1964-OUT,Interior,Irvington,20,Irvington Wholesale Workshop,KY,527 ELDERBERRY STREET,40146
+35,LE MODE,PREMIUM,Water,Top Coat,"Latex, Exterior Flat (MPI Gloss Level 1)",10,10.99,100,2006-ZBH,Exterior,Brookfield,10,Lambert Decor of New Hampshire,NH,1839 DEMEURE PLACE,3872
+28,OLDE TYME QUALITY,CONTRACTOR,Solvent,Top Coat,Polyurethane Deck Coating (Slip-Resistant),35,25.99,137,2046-RUS,Exterior,Brookfield,10,Lambert Decor of New Hampshire,NH,1839 DEMEURE PLACE,3872
+30,LONG HAUL,CONTRACTOR,Solvent,Top Coat,Graffiti Protection Top-Coat,10,16.99,145,2068-TSC,Exterior,Rowsburg,15,Unlimited Wholesale of Ohio,OH,454 WINDJAMMER CIRCLE,44866
+30,LONG HAUL,CONTRACTOR,Water,Top Coat,"Dry Fall, Latex, ('eggshell-like' - MPI Gloss Level 3)",10,13.99,60,2101-WCF,Interior,Rowsburg,15,Unlimited Wholesale of Ohio,OH,454 WINDJAMMER CIRCLE,44866
+25,STUTTENFURST,CONTRACTOR,Water,Top Coat,"Latex, Interior, Semi-Gloss (MPI Gloss Level 5) ",20,12.99,66,2116-PVN,Interior,Sweek Hollow,5,National Wholesale Consolidated,VT,1185 BIGLERVILLE CIRCLE,5483
+35,LE MODE,PREMIUM,Solvent,Top Coat,"Dry Fall, Alkyd, Flat",35,7.99,94,2129-BCP,Interior,Newport,16,National Solubles Partners,NC,1618 CARIN PLACE,28570
+23,FORESTERS BEST,VALUE,Solvent,Top Coat,"Varnish, with UV Inhibitor, Exterior, Semi-Gloss (MPI Gloss Level 5)",25,15.89,34,2134-QFE,Exterior,Pine Hill,6,Pine Hill Chemical Warehouse,PA,1777 EASTWIND COURT,17901
+35,LE MODE,PREMIUM,Solvent,Top Coat,"Alkyd, Quick Dry, Gloss",10,17.99,8,2143-VQX,Interior,Irvington,20,Irvington Wholesale Workshop,KY,527 ELDERBERRY STREET,40146
+31,VALU-MATTE,VALUE,Water,Primer,"Primer Sealer, Low Permeability, Latex, Interior",5,7.59,66,2200-DAI,Interior,Irvington,20,Irvington Wholesale Workshop,KY,527 ELDERBERRY STREET,40146
+27,HOME COMFORT,CONTRACTOR,Water,Top Coat,"Varnish, Exterior, Water Based, (Gloss) MPI Gloss Level 6",40,13.39,131,2212-MNF,Exterior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+29,BUSTERS,VALUE,Solvent,Top Coat,"Dry Fall, Alkyd, ('eggshell-like' - MPI Gloss Level 3)",5,13.59,43,2217-JOH,Interior,Newport,16,National Solubles Partners,NC,1618 CARIN PLACE,28570
+35,LE MODE,PREMIUM,Solvent,Primer,"Primer, Vinyl Wash",5,7.59,68,2231-OXK,Interior,Westfield,14,Watkins Wholesale Warehouse,MA,632 GLENN NB ON MULDOON RAMP,1086
+33,BINDER PRIME,PREMIUM,Water,Top Coat,"Light Industrial Coating, Exterior, Water Based, Gloss (MPI Gloss Level 6)",25,23.29,41,2233-GJH?,Exterior,Orchard Lake,22,Rivera Decor Partners,MI,1404 SEWARD NB ON TUDOR RAMP,48324
+31,VALU-MATTE,VALUE,Solvent,Top Coat,"Vinyl, High Build",5,17.99,113,2262-NBI,Interior,Arlington,13,Boykin Chemical Workshop,VA,200 AERO AVENUE,22218
+30,LONG HAUL,CONTRACTOR,Water,Top Coat,"Latex, Interior, Institutional Low Odor/VOC, ('satin-like' - MPI Gloss Level 4) ",5,29.99,89,2351-WVS,Interior,Rowsburg,15,Unlimited Wholesale of Ohio,OH,454 WINDJAMMER CIRCLE,44866
+30,LONG HAUL,CONTRACTOR,Solvent,Top Coat,"Varnish, Interior, Polyurethane, Oil Modified, Gloss",25,6.59,3,2366-EFV,Interior,Rowsburg,15,Unlimited Wholesale of Ohio,OH,454 WINDJAMMER CIRCLE,44866
+25,STUTTENFURST,CONTRACTOR,Water,Top Coat,"Latex, Interior, ('satin-like' - MPI Gloss Level 4)",15,13.59,77,2379-PCX,Interior,Lake Lynn,3,Leal Decor Workshop,PA,1105 OLSON CIRCLE,15439
+30,LONG HAUL,CONTRACTOR,Solvent,Top Coat,"Epoxy, High Build, Self Priming, Low Gloss",35,29.99,133,2384-PGY,Exterior,Rowsburg,15,Unlimited Wholesale of Ohio,OH,454 WINDJAMMER CIRCLE,44866
+30,LONG HAUL,CONTRACTOR,Water,Top Coat,"Light Industrial Coating, Interior, Water Based, Gloss (MPI Gloss Level 6)",10,15.59,6,2397-RDX,Interior,Rowsburg,15,Unlimited Wholesale of Ohio,OH,454 WINDJAMMER CIRCLE,44866
+23,FORESTERS BEST,VALUE,Water,Top Coat,"Dry Fall, Latex, Flat",15,9.89,143,2407-SUX,Interior,Baltimore,8,Baltimore Paints Consolidated,MD,222 SEWARD 34TH RAMP,21222
+27,HOME COMFORT,CONTRACTOR,Solvent,Top Coat,"Polyurethane, Two-Component, Pigmented, Gloss (MPI Gloss Level 6)",20,4.29,26,2410-SKH,Interior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+27,HOME COMFORT,CONTRACTOR,Water,Primer,"Primer, Epoxy, Water Based, Anti-Corrosive, for Metal",15,38.99,86,2455-ZKN,Exterior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+33,BINDER PRIME,PREMIUM,Water,Top Coat,"Latex, Recycled (Remanufactured), Exterior, Low Sheen (G 3-4)",35,38.99,95,2496-QMW,Exterior,Orchard Lake,22,Rivera Decor Partners,MI,1404 SEWARD NB ON TUDOR RAMP,48324
+30,LONG HAUL,CONTRACTOR,Water,Top Coat,"Dry Fall, Water Based, for Galvanized Steel, MPI Gloss Level 5",25,20.59,70,2553-FSW,Interior,Rowsburg,15,Unlimited Wholesale of Ohio,OH,454 WINDJAMMER CIRCLE,44866
+30,LONG HAUL,CONTRACTOR,Solvent,Top Coat,"Stain, for Exterior Wood Decks",10,12.39,17,2584-CIJ,Exterior,Rowsburg,15,Unlimited Wholesale of Ohio,OH,454 WINDJAMMER CIRCLE,44866
+29,BUSTERS,VALUE,Solvent,Primer,"Primer, Alkali Resistant, Solvent Based",5,31.99,81,2611-QYG,Interior,South Miami,12,International Decor Partners,FL,355 WILDWOOD DRIVE,33143
+27,HOME COMFORT,CONTRACTOR,Water,Top Coat,"Top-Coat for Multicolored Coating, Clear",40,35.99,59,2699-GNS,Interior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+28,OLDE TYME QUALITY,CONTRACTOR,Solvent,Top Coat,"Alkyd, Interior, ('eggshell-like' - MPI Gloss Level 3) ",40,9.99,10,2756-CKP,Interior,Arlington,13,Boykin Chemical Workshop,VA,200 AERO AVENUE,22218
+33,BINDER PRIME,PREMIUM,Solvent,Top Coat,"Aluminum Paint, High Heat (up to 590° C/1100° F)",10,32.99,20,2766-EYO,Exterior,Orchard Lake,22,Rivera Decor Partners,MI,1404 SEWARD NB ON TUDOR RAMP,48324
+35,LE MODE,PREMIUM,Solvent,Primer,"Primer, Stain Blocking",15,32.99,129,2833-LIV,Exterior,Lake Lynn,3,Leal Decor Workshop,PA,1105 OLSON CIRCLE,15439
+28,OLDE TYME QUALITY,CONTRACTOR,Solvent,Primer,"Primer, Stain Blocking",40,32.99,87,2857-NDO,Interior,Newport,16,National Solubles Partners,NC,1618 CARIN PLACE,28570
+30,LONG HAUL,CONTRACTOR,Solvent,Top Coat,"Aluminum Paint, Heat Resistant (Up to 427°C - 800°F)",10,18.99,19,2866-RAM,Interior,Rowsburg,15,Unlimited Wholesale of Ohio,OH,454 WINDJAMMER CIRCLE,44866
+29,BUSTERS,VALUE,Solvent,Top Coat,"Floor Coating, Thin Film, for Aircraft Maintenance Facilities",15,32.99,121,2870-QZR,Interior,Rowsburg,15,Unlimited Wholesale of Ohio,OH,454 WINDJAMMER CIRCLE,44866
+23,FORESTERS BEST,VALUE,Solvent,Top Coat,"Water Repellant, Clear (Not Paintable)",5,23.99,70,2896-OZJ,Exterior,Sweek Hollow,5,National Wholesale Consolidated,VT,1185 BIGLERVILLE CIRCLE,5483
+23,FORESTERS BEST,VALUE,Solvent,Top Coat,"Alkyd, Exterior Flat (MPI Gloss Level 1)",15,10.99,127,2918-THH,Exterior,Beebe Plain,2,Warren Paints Consolidated,VT,377 LONGHORN STREET,5823
+35,LE MODE,PREMIUM,Solvent,Top Coat,"Varnish, Interior, Flat ",15,13.59,61,2932-PBS,Interior,Brimstone Corners,18,Ledbetter Chemical of Vermont,VT,1174 SPRUCEWOOD STREET,5761
+31,VALU-MATTE,VALUE,Solvent,Top Coat,"Polyurethane, Moisture Cured, Pigmented, Semi-Gloss (MPI Gloss Level 5)",20,16.99,139,2990-BNH,Exterior,Westfield,14,Watkins Wholesale Warehouse,MA,632 GLENN NB ON MULDOON RAMP,1086
+27,HOME COMFORT,CONTRACTOR,Solvent,Top Coat,Multicolor Coating,25,23.59,32,2996-VMO,Interior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+29,BUSTERS,VALUE,Solvent,Primer,"Primer, Galvanized, Non-Cementitious",30,15.69,37,3035-NHD,Exterior,Sweek Hollow,5,National Wholesale Consolidated,VT,1185 BIGLERVILLE CIRCLE,5483
+25,STUTTENFURST,CONTRACTOR,Solvent,Sealer,"Sealer, for Knots",5,3.99,65,3036-PCT,Exterior,Grand Ledge,7,Kenny Paints Workshop,MI,1286 RICHARD EVELYN BYRD STREET,48837
+33,BINDER PRIME,PREMIUM,Solvent,Primer,"Primer, Bonding, Solvent Based",15,5.59,100,3061-DOI,Interior,Orchard Lake,22,Rivera Decor Partners,MI,1404 SEWARD NB ON TUDOR RAMP,48324
+35,LE MODE,PREMIUM,Solvent,Primer,"Primer, Zinc Rich, Inorganic",25,8.99,28,3079-DEG,Exterior,Arlington,13,Boykin Chemical Workshop,VA,200 AERO AVENUE,22218
+29,BUSTERS,VALUE,Water,Top Coat,"Latex, Recycled (Remanufactured), Exterior Flat (G1)",5,38.99,61,3161-XJS,Exterior,Brimstone Corners,18,Ledbetter Chemical of Vermont,VT,1174 SPRUCEWOOD STREET,5761
+35,LE MODE,PREMIUM,Solvent,Top Coat,"Top-Coat for Multicolored Coating, Clear",20,35.99,44,3215-VIP,Interior,Baltimore,8,Baltimore Paints Consolidated,MD,222 SEWARD 34TH RAMP,21222
+33,BINDER PRIME,PREMIUM,Solvent,Top Coat,"Polyurethane, Moisture Cured, Pigmented, Semi-Gloss (MPI Gloss Level 5)",40,16.99,142,3258-RVB,Interior,Orchard Lake,22,Rivera Decor Partners,MI,1404 SEWARD NB ON TUDOR RAMP,48324
+25,STUTTENFURST,CONTRACTOR,Solvent,Filler,"Paste, Wood Filler",35,3.99,37,3274-XJX,Interior,S Plymouth,19,S Plymouth Solubles Workshop,NY,1874 LAWLOR CIRCLE,13844
+30,LONG HAUL,CONTRACTOR,Solvent,Primer,"Primer, Zinc Rich, Moisture Cured",5,13.99,112,3298-YFL,Interior,Lake Lynn,3,Leal Decor Workshop,PA,1105 OLSON CIRCLE,15439
+25,STUTTENFURST,CONTRACTOR,Solvent,Top Coat,"Epoxy, Gloss",25,7.79,56,3343-DJU,Exterior,Linden,17,Linden Consolidated,MI,1353 STEPHEN CIRCLE,48451
+29,BUSTERS,VALUE,Water,Cleaner,"Cleaner, Etching, for Galvanized Metal",30,4.59,78,3384-DML,Interior,Lake Lynn,3,Leal Decor Workshop,PA,1105 OLSON CIRCLE,15439
+25,STUTTENFURST,CONTRACTOR,Water,Top Coat,"Top-Coat for Multicolored Coating, Clear",5,35.99,132,3393-AZQ,Exterior,Westfield,14,Watkins Wholesale Warehouse,MA,632 GLENN NB ON MULDOON RAMP,1086
+30,LONG HAUL,CONTRACTOR,Water,Top Coat,"Latex, Exterior Semi-Gloss (MPI Gloss Level 5)",30,10.99,127,3488-GSE,Exterior,Rowsburg,15,Unlimited Wholesale of Ohio,OH,454 WINDJAMMER CIRCLE,44866
+33,BINDER PRIME,PREMIUM,Solvent,Primer,"Primer, Bonding, Solvent Based",25,5.59,87,3503-FGI,Exterior,Orchard Lake,22,Rivera Decor Partners,MI,1404 SEWARD NB ON TUDOR RAMP,48324
+35,LE MODE,PREMIUM,Water,Top Coat,"Varnish, Exterior, Water Based, (Flat) MPI Gloss Level 1",15,12.59,7,3516-AGJ,Exterior,Linden,17,Linden Consolidated,MI,1353 STEPHEN CIRCLE,48451
+31,VALU-MATTE,VALUE,Solvent,Primer,"Primer, Metal, Surface Tolerant",35,7.49,34,3528-GBV,Exterior,Pine Hill,6,Pine Hill Chemical Warehouse,PA,1777 EASTWIND COURT,17901
+25,STUTTENFURST,CONTRACTOR,Solvent,Sealer,"Lacquer, Sanding Sealer, White",40,3.29,70,3561-LYU,Exterior,Beebe Plain,2,Warren Paints Consolidated,VT,377 LONGHORN STREET,5823
+27,HOME COMFORT,CONTRACTOR,Solvent,Cleaner,"Linseed Oil, Boiled",15,12.99,129,3585-MCJ,Interior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+27,HOME COMFORT,CONTRACTOR,Solvent,Primer,"Primer Sealer, Alkyd, Interior",15,7.39,80,3594-BYW,Interior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+27,HOME COMFORT,CONTRACTOR,Water,Top Coat,"Traffic Marking Paint, Latex",10,18.59,123,3610-RKR,Exterior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+25,STUTTENFURST,CONTRACTOR,Water,Top Coat,"Latex, Exterior (MPI Gloss Level 2)",5,45.99,21,3614-PTT,Exterior,Huntington,9,Donahue Solubles of West Virginia,WV,382 FLORENCE CIRCLE,25700
+27,HOME COMFORT,CONTRACTOR,Water,Top Coat,"Epoxy-Modified Latex, Interior, Semi-Gloss (MPI Gloss Level 5)",25,54.89,39,3694-XFJ,Interior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+30,LONG HAUL,CONTRACTOR,Solvent,Sealer,"Sealer, Solvent Based, for Concrete Floors",15,20.59,109,3701-YAW,Interior,Irvington,20,Irvington Wholesale Workshop,KY,527 ELDERBERRY STREET,40146
+28,OLDE TYME QUALITY,CONTRACTOR,Solvent,Sealer,"Epoxy, Quick Set, Mason",20,14.99,75,3716-IWN,Exterior,Mt Blanchard,1,Mt Blanchard Solvents Supplies,OH,1625 BAY VIEW DRIVE,45867
+23,FORESTERS BEST,VALUE,Solvent,Top Coat,"Acrylic Coating, High Build, for Pavement Marking",10,36.99,132,3716-WZD,Interior,Brookfield,10,Lambert Decor of New Hampshire,NH,1839 DEMEURE PLACE,3872
+31,VALU-MATTE,VALUE,Solvent,Primer,"Primer, Galvanized Metal, Cementitious",10,14.89,119,3734-CUQ,Exterior,Brimstone Corners,18,Ledbetter Chemical of Vermont,VT,1174 SPRUCEWOOD STREET,5761
+33,BINDER PRIME,PREMIUM,Water,Top Coat,"Floor Paint, Latex, Low Gloss ",10,21.99,70,3754-MAK,Exterior,Orchard Lake,22,Rivera Decor Partners,MI,1404 SEWARD NB ON TUDOR RAMP,48324
+33,BINDER PRIME,PREMIUM,Water,Top Coat,"Latex, Recycled (Remanufactured), Interior (MPI Gloss Level 3)",10,41.99,105,3933-NSU,Interior,Orchard Lake,22,Rivera Decor Partners,MI,1404 SEWARD NB ON TUDOR RAMP,48324
+27,HOME COMFORT,CONTRACTOR,Solvent,Top Coat,Shellac,35,11.99,16,3943-HFA,Exterior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+30,LONG HAUL,CONTRACTOR,Water,Top Coat,"Water Repellant, Clear (Not Paintable)",15,23.99,130,3955-NWD,Interior,Rowsburg,15,Unlimited Wholesale of Ohio,OH,454 WINDJAMMER CIRCLE,44866
+30,LONG HAUL,CONTRACTOR,Water,Primer,"Primer, Stain Blocking, Water Based",10,29.99,100,4045-HUC,Interior,Orchard Lake,22,Rivera Decor Partners,MI,1404 SEWARD NB ON TUDOR RAMP,48324
+23,FORESTERS BEST,VALUE,Solvent,Sealer,"Sealer, Solvent Based, for Concrete Floors",10,20.59,86,4072-SWV,Exterior,S Plymouth,19,S Plymouth Solubles Workshop,NY,1874 LAWLOR CIRCLE,13844
+28,OLDE TYME QUALITY,CONTRACTOR,Solvent,Primer,"Primer, Oil for Exterior Wood",20,9.29,111,4132-QIN,Exterior,Arlington,13,Boykin Chemical Workshop,VA,200 AERO AVENUE,22218
+33,BINDER PRIME,PREMIUM,Solvent,Top Coat,"Varnish, Polyurethane, Moisture Cured, Gloss (MPI Gloss Level 6)",25,17.79,30,4153-VMO,Interior,Orchard Lake,22,Rivera Decor Partners,MI,1404 SEWARD NB ON TUDOR RAMP,48324
+30,LONG HAUL,CONTRACTOR,Water,Top Coat,"Varnish, Water Based, Clear, Satin",5,14.59,7,4200-FTI,Interior,S Plymouth,19,S Plymouth Solubles Workshop,NY,1874 LAWLOR CIRCLE,13844
+27,HOME COMFORT,CONTRACTOR,Solvent,Top Coat,"Varnish, Polyurethane, Moisture Cured, Flat (MPI Gloss Level 1)",40,13.59,49,4241-UOF,Exterior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+35,LE MODE,PREMIUM,Water,Top Coat,"Light Industrial Coating, Interior, Water Based ('eggshell-like' - MPI Gloss Level 3) ",40,15.59,97,4260-FGB,Interior,Brookfield,10,Lambert Decor of New Hampshire,NH,1839 DEMEURE PLACE,3872
+27,HOME COMFORT,CONTRACTOR,Water,Primer,"Primer Sealer, Interior, Institutional Low Odor/VOC",5,18.59,68,4346-GCP,Interior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+33,BINDER PRIME,PREMIUM,Solvent,Top Coat,"Stain, for Exterior Wood Decks",20,11.49,122,4431-LGU,Interior,Orchard Lake,22,Rivera Decor Partners,MI,1404 SEWARD NB ON TUDOR RAMP,48324
+29,BUSTERS,VALUE,Water,Top Coat,Multicolor Coating,5,23.59,3,4465-QHD,Interior,Mt Blanchard,1,Mt Blanchard Solvents Supplies,OH,1625 BAY VIEW DRIVE,45867
+27,HOME COMFORT,CONTRACTOR,Solvent,Primer,"Primer, Galvanized, Non-Cementitious",10,15.69,90,4481-SGY,Interior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+28,OLDE TYME QUALITY,CONTRACTOR,Solvent,Top Coat,"Alkyd, Exterior, Semi-Gloss (MPI Gloss Level 5)",25,21.99,132,4491-GNC,Exterior,Mt Blanchard,1,Mt Blanchard Solvents Supplies,OH,1625 BAY VIEW DRIVE,45867
+31,VALU-MATTE,VALUE,Water,Top Coat,"Elastomeric, Pigmented, Exterior, Water Based, Flat",35,21.99,36,4518-GHU,Exterior,Newport,16,National Solubles Partners,NC,1618 CARIN PLACE,28570
+28,OLDE TYME QUALITY,CONTRACTOR,Water,Top Coat,"Latex, Interior, High Performance Architectural, Semi-Gloss (MPI Gloss Level 5)",30,34.49,42,4583-VCR,Interior,Grand Ledge,7,Kenny Paints Workshop,MI,1286 RICHARD EVELYN BYRD STREET,48837
+28,OLDE TYME QUALITY,CONTRACTOR,Solvent,Filler,"Block Filler, Epoxy",35,7.79,82,4626-LJU,Interior,Lake Lynn,3,Leal Decor Workshop,PA,1105 OLSON CIRCLE,15439
+35,LE MODE,PREMIUM,Solvent,Cleaner,Danish Oil,15,3.49,79,4667-JLN,Interior,Sweek Hollow,5,National Wholesale Consolidated,VT,1185 BIGLERVILLE CIRCLE,5483
+30,LONG HAUL,CONTRACTOR,Solvent,Top Coat,"Lacquer, Clear, Flat",15,14.99,14,4784-SLU,Interior,Irvington,20,Irvington Wholesale Workshop,KY,527 ELDERBERRY STREET,40146
+27,HOME COMFORT,CONTRACTOR,Water,Primer,"Primer, Alkali Resistant, Water Based",10,9.99,128,4812-CMJ,Interior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+27,HOME COMFORT,CONTRACTOR,Water,Top Coat,"Varnish, Exterior, Water Based, (Velvet-Like) MPI Gloss Level 2",40,12.99,42,4812-VNN,Exterior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+33,BINDER PRIME,PREMIUM,Solvent,Top Coat,"Preservative, for Exterior Wood",40,4.49,88,4846-BHT,Exterior,Orchard Lake,22,Rivera Decor Partners,MI,1404 SEWARD NB ON TUDOR RAMP,48324
+31,VALU-MATTE,VALUE,Water,Top Coat,"Latex, Recycled (Remanufactured), Interior (MPI Gloss Level 1)",20,41.99,107,4879-AMS,Interior,Westfield,14,Watkins Wholesale Warehouse,MA,632 GLENN NB ON MULDOON RAMP,1086
+28,OLDE TYME QUALITY,CONTRACTOR,Water,Cleaner,"Cleaner, Etching, for Galvanized Metal",20,4.59,121,4900-YSQ,Exterior,Beebe Plain,2,Warren Paints Consolidated,VT,377 LONGHORN STREET,5823
+35,LE MODE,PREMIUM,Water,Top Coat,"Varnish, Exterior, Water Based, (Eggshell-like) MPI Gloss Level 3",30,12.99,123,4912-YXS,Exterior,Pine Hill,6,Pine Hill Chemical Warehouse,PA,1777 EASTWIND COURT,17901
+23,FORESTERS BEST,VALUE,Solvent,Primer,"Undercoat, Enamel, Interior",20,8.49,20,4949-VFI,Interior,Grand Ledge,7,Kenny Paints Workshop,MI,1286 RICHARD EVELYN BYRD STREET,48837
+33,BINDER PRIME,PREMIUM,Water,Primer,"Primer, Latex, for Interior Wood",20,13.69,33,4976-PZN,Interior,Orchard Lake,22,Rivera Decor Partners,MI,1404 SEWARD NB ON TUDOR RAMP,48324
+27,HOME COMFORT,CONTRACTOR,Water,Top Coat,"Latex, Interior, Institutional Low Odor/VOC, Semi-Gloss (MPI Gloss Level 5)",30,29.99,63,4987-BFL,Interior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+35,LE MODE,PREMIUM,Solvent,Top Coat,"Aluminum Paint, Heat Resistant (Up to 427°C - 800°F)",30,18.99,129,5046-TTC,Exterior,Laporte,11,Super Solubles of Pennsylvania,PA,1951 WEST 28TH COURT,18626
+23,FORESTERS BEST,VALUE,Water,Top Coat,"Latex, Interior, Institutional Low Odor/VOC, ('eggshell-like' - MPI Gloss Level 3) ",40,29.99,121,5060-EDB,Interior,Lake Lynn,3,Leal Decor Workshop,PA,1105 OLSON CIRCLE,15439
+35,LE MODE,PREMIUM,Solvent,Sealer,"Fire Resistant Sealer, for Exterior Wood (ULC Approved)",40,19.99,107,5140-RTG,Exterior,Beebe Plain,2,Warren Paints Consolidated,VT,377 LONGHORN STREET,5823
+25,STUTTENFURST,CONTRACTOR,Water,Top Coat,"Latex, Recycled (Remanufactured), Interior (MPI Gloss Level 2)",25,38.99,105,5155-YQL,Interior,Linden,17,Linden Consolidated,MI,1353 STEPHEN CIRCLE,48451
+31,VALU-MATTE,VALUE,Solvent,Sealer,"Lacquer, Sanding Sealer, Clear",30,13.99,17,5161-GIZ,Exterior,Lake Lynn,3,Leal Decor Workshop,PA,1105 OLSON CIRCLE,15439
+31,VALU-MATTE,VALUE,Water,Top Coat,"Latex, Interior, High Performance Architectural, ('velvet-like' - MPI Gloss Level 2)",35,34.49,15,5213-YTB,Interior,Beebe Plain,2,Warren Paints Consolidated,VT,377 LONGHORN STREET,5823
+29,BUSTERS,VALUE,Solvent,Top Coat,"Acrylic Coating, High Build, for Pavement Marking",10,36.99,109,5220-JDO,Exterior,Brookfield,10,Lambert Decor of New Hampshire,NH,1839 DEMEURE PLACE,3872
+27,HOME COMFORT,CONTRACTOR,Solvent,Primer,"Primer, Zinc Rich, Moisture Cured",40,13.99,96,5250-JDL,Exterior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+27,HOME COMFORT,CONTRACTOR,Water,Top Coat,"Epoxy-Modified Latex, Interior, Gloss (MPI Gloss Level 6)",25,21.59,119,5290-HTG,Interior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+28,OLDE TYME QUALITY,CONTRACTOR,Water,Top Coat,"Dry Fall, Water Based, for Galvanized Steel, MPI Gloss Level 3",35,21.59,119,5379-BLX,Interior,Grand Ledge,7,Kenny Paints Workshop,MI,1286 RICHARD EVELYN BYRD STREET,48837
+27,HOME COMFORT,CONTRACTOR,Water,Top Coat,"Latex, Interior, Institutional Low Odor/VOC, Flat (MPI Gloss Level 1)",5,29.99,71,5413-TTF,Interior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+35,LE MODE,PREMIUM,Solvent,Top Coat,"Fire Retardant Sealer, Alkyd, Interior (ULC Approved)",30,28.99,26,5437-WBO,Interior,Sweek Hollow,5,National Wholesale Consolidated,VT,1185 BIGLERVILLE CIRCLE,5483
+31,VALU-MATTE,VALUE,Solvent,Primer,"Primer, Alkyd, Anti-Corrosive for Metal",25,10.99,66,5445-XOY,Exterior,Rowsburg,15,Unlimited Wholesale of Ohio,OH,,44866
+29,BUSTERS,VALUE,Water,Top Coat,"Latex, Interior, Flat (MPI Gloss Level 1)",30,8.99,115,5465-YYG,Interior,Linden,17,Linden Consolidated,MI,1353 STEPHEN CIRCLE,48451
+29,BUSTERS,VALUE,Solvent,Top Coat,Bituminous Coating,10,28.49,79,5496-MRA,Exterior,Grand Ledge,7,Kenny Paints Workshop,MI,1286 RICHARD EVELYN BYRD STREET,48837
+29,BUSTERS,VALUE,Solvent,Top Coat,"Fire Retardant Coating, Alkyd, Interior, Flat (ULC Approved)",35,35.99,56,5508-OUB,Interior,Pine Hill,6,Pine Hill Chemical Warehouse,PA,1777 EASTWIND COURT,17901
+27,HOME COMFORT,CONTRACTOR,Water,Top Coat,"Floor Paint, Latex, Gloss ",15,21.99,82,5516-FYH,Exterior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+30,LONG HAUL,CONTRACTOR,Solvent,Top Coat,"Water Repellent, Clear (Paintable)",25,15.59,32,5529-SBL,Exterior,Rowsburg,15,Unlimited Wholesale of Ohio,OH,454 WINDJAMMER CIRCLE,44866
+35,LE MODE,PREMIUM,Water,Top Coat,"Fire Retardant Coating, Interior, Clear (ULC Approved)",15,32.99,31,5541-HST,Interior,Newport,16,National Solubles Partners,NC,1618 CARIN PLACE,28570
+31,VALU-MATTE,VALUE,Water,Top Coat,"Latex, Interior, ('velvet-like' - MPI Gloss Level 2)",20,14.69,14,5587-MNY,Interior,Baltimore,8,Baltimore Paints Consolidated,MD,222 SEWARD 34TH RAMP,21222
+25,STUTTENFURST,CONTRACTOR,Water,Primer,"Primer Sealer, Latex, Interior",5,10.99,38,5587-PIP,Interior,Huntington,9,Donahue Solubles of West Virginia,WV,382 FLORENCE CIRCLE,25700
+30,LONG HAUL,CONTRACTOR,Water,Top Coat,"Dry Fall, Water Based, for Galvanized Steel, Flat (MPI Gloss Level 1)",25,23.99,24,5595-NYE,Interior,Rowsburg,15,Unlimited Wholesale of Ohio,OH,454 WINDJAMMER CIRCLE,44866
+30,LONG HAUL,CONTRACTOR,Solvent,Top Coat,"Polyurethane, Two-Component, Pigmented, Gloss (MPI Gloss Level 6)",40,4.29,13,5602-QBF,Exterior,Rowsburg,15,Unlimited Wholesale of Ohio,OH,454 WINDJAMMER CIRCLE,44866
+30,LONG HAUL,CONTRACTOR,Solvent,Top Coat,"Alkyd, Interior, Flat (MPI Gloss Level 1) ",15,12.99,125,5625-FVF,Interior,Rowsburg,15,Unlimited Wholesale of Ohio,OH,454 WINDJAMMER CIRCLE,44866
+35,LE MODE,PREMIUM,Water,Top Coat,"Latex, Interior, Institutional Low Odor/VOC, Gloss (MPI Gloss Level 6)",10,29.99,39,5642-IDA,Interior,Lake Lynn,3,Leal Decor Workshop,PA,1105 OLSON CIRCLE,15439
+23,FORESTERS BEST,VALUE,Solvent,Top Coat,Aluminum Paint,15,12.99,87,5653-RTU,Interior,Orchard Lake,22,Rivera Decor Partners,MI,1404 SEWARD NB ON TUDOR RAMP,48324
+35,LE MODE,PREMIUM,Water,Top Coat,"Elastomeric Coating, Exterior, Water Based, Non-Flat",35,17.29,100,5659-BFS,Exterior,Westfield,14,Watkins Wholesale Warehouse,MA,632 GLENN NB ON MULDOON RAMP,1086
+27,HOME COMFORT,CONTRACTOR,Solvent,Sealer,"Shop Coat, Quick Dry, for Interior Steel",20,15.59,19,5728-ZPO,Interior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+30,LONG HAUL,CONTRACTOR,Solvent,Top Coat,"Polyurethane, Moisture Cured, Pigmented, Gloss (MPI Gloss Level 6)",35,16.99,54,5734-BGX,Interior,Rowsburg,15,Unlimited Wholesale of Ohio,OH,454 WINDJAMMER CIRCLE,44866
+29,BUSTERS,VALUE,Solvent,Top Coat,"Epoxy, High Build, Low Gloss",35,13.59,81,5781-TKY,Exterior,Brimstone Corners,18,Ledbetter Chemical of Vermont,VT,1174 SPRUCEWOOD STREET,5761
+28,OLDE TYME QUALITY,CONTRACTOR,Solvent,Top Coat,"Varnish, with UV Inhibitor, Exterior, Gloss (MPI Gloss Level 6)",25,15.89,15,5794-JGQ,Exterior,Linden,17,Linden Consolidated,MI,1353 STEPHEN CIRCLE,48451
+25,STUTTENFURST,CONTRACTOR,Solvent,Primer,"Primer, Alkali Resistant, Solvent Based",30,31.99,23,5980-BME,Exterior,Pine Hill,6,Pine Hill Chemical Warehouse,PA,1777 EASTWIND COURT,17901
+28,OLDE TYME QUALITY,CONTRACTOR,Water,Primer,"Primer, Stain Blocking, Water Based",20,29.99,140,6033-YFY,Exterior,Newport,16,National Solubles Partners,NC,1618 CARIN PLACE,28570
+25,STUTTENFURST,CONTRACTOR,Solvent,Primer,"Primer, Metal, Surface Tolerant",30,7.49,53,6041-PBS,Interior,Ripley,4,Ripley Warehouse,TN,1278 STORMY PLACE,38063
+23,FORESTERS BEST,VALUE,Water,Top Coat,"Deck Coating, Latex, Exterior",40,32.89,63,6109-ZZO,Exterior,Irvington,20,Irvington Wholesale Workshop,KY,527 ELDERBERRY STREET,40146
+27,HOME COMFORT,CONTRACTOR,Solvent,Top Coat,"Dry Fall, Alkyd, Semi-Gloss (MPI Gloss Level 5)",35,21.99,15,6116-NQU,Interior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+33,BINDER PRIME,PREMIUM,Solvent,Top Coat,"Varnish, Interior, Gloss",30,15.59,117,6176-XTX,Interior,Orchard Lake,22,Rivera Decor Partners,MI,1404 SEWARD NB ON TUDOR RAMP,48324
+27,HOME COMFORT,CONTRACTOR,Water,Top Coat,"Textured Coating, Latex, Flat",15,11.99,132,6249-LYB,Exterior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+30,LONG HAUL,CONTRACTOR,Solvent,Top Coat,Epoxy Deck Coating (Slip-Resistant),30,22.59,131,6249-NDN,Exterior,Rowsburg,15,Unlimited Wholesale of Ohio,OH,454 WINDJAMMER CIRCLE,44866
+27,HOME COMFORT,CONTRACTOR,Water,Top Coat,"Fire Retardant Top-Coat, Latex, Interior (ULC Approved)",30,29.99,127,6257-AGA,Interior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+25,STUTTENFURST,CONTRACTOR,Water,Filler,"Block Filler, Latex, Interior/Exterior",5,12.49,119,6350-UPP,Exterior,S Plymouth,19,S Plymouth Solubles Workshop,NY,1874 LAWLOR CIRCLE,13844
+33,BINDER PRIME,PREMIUM,Water,Top Coat,"Traffic Marking Paint, Latex",40,18.59,102,6358-UST?,Interior,Orchard Lake,22,Rivera Decor Partners,MI,1404 SEWARD NB ON TUDOR RAMP,48324
+23,FORESTERS BEST,VALUE,Water,Top Coat,"Latex, Recycled (Consolidated), Exterior Flat (G1)",20,41.99,103,6367-AKJ,Exterior,Beebe Plain,2,Warren Paints Consolidated,VT,377 LONGHORN STREET,5823
+35,LE MODE,PREMIUM,Water,Primer,"Primer, Latex for Exterior Wood",30,6.99,117,6451-KGJ,Exterior,Pine Hill,6,Pine Hill Chemical Warehouse,PA,1777 EASTWIND COURT,17901
+30,LONG HAUL,CONTRACTOR,Water,Top Coat,"Latex, Recycled (Consolidated), Interior (MPI Gloss Level 2)",15,43.99,34,6488-MIG,Interior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+29,BUSTERS,VALUE,Solvent,Top Coat,"Fire Retardant Coating, Interior, Clear (ULC Approved)",25,32.99,27,6491-XKF,Interior,Arlington,13,Boykin Chemical Workshop,VA,200 AERO AVENUE,22218
+35,LE MODE,PREMIUM,Water,Primer,"Primer, Alkali Resistant, Water Based",5,9.99,93,6596-HOO,Exterior,Rowsburg,15,Unlimited Wholesale of Ohio,OH,454 WINDJAMMER CIRCLE,44866
+29,BUSTERS,VALUE,Solvent,Top Coat,"Epoxy, High Build, Gloss",10,13.59,10,6626-ROK,Exterior,Westfield,14,Watkins Wholesale Warehouse,MA,632 GLENN NB ON MULDOON RAMP,1086
+33,BINDER PRIME,PREMIUM,Solvent,Top Coat,"Stain, Exterior, Solvent Based, Semi-Transparent",30,11.99,141,6651-ICK,Exterior,Orchard Lake,22,Rivera Decor Partners,MI,1404 SEWARD NB ON TUDOR RAMP,48324
+30,LONG HAUL,CONTRACTOR,Solvent,Top Coat,"Alkyd, Exterior Gloss (MPI Gloss Level 6)",40,10.99,144,6858-EJW,Exterior,Rowsburg,15,Unlimited Wholesale of Ohio,OH,454 WINDJAMMER CIRCLE,44866
+29,BUSTERS,VALUE,Water,Primer,"Primer, Epoxy, Water Based, Anti-Corrosive, for Metal",25,38.99,127,6865-HAO,Interior,South Miami,12,International Decor Partners,FL,355 WILDWOOD DRIVE,33143
+27,HOME COMFORT,CONTRACTOR,Water,Top Coat,"Latex, Recycled (Consolidated), Interior (MPI Gloss Level 1)",5,48.59,35,6894-JQV,Interior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+30,LONG HAUL,CONTRACTOR,Solvent,Top Coat,"Floor Enamel, Alkyd, Gloss (MPI Gloss Level 6)",10,11.59,69,6925-KDN,Exterior,Rowsburg,15,Unlimited Wholesale of Ohio,OH,454 WINDJAMMER CIRCLE,44866
+29,BUSTERS,VALUE,Water,Filler,"Block Filler, Latex, Interior/Exterior",15,8.99,34,6933-YOI,Interior,Sweek Hollow,5,National Wholesale Consolidated,VT,1185 BIGLERVILLE CIRCLE,5483
+29,BUSTERS,VALUE,Solvent,Top Coat,"Polyurethane, Moisture Cured, Pigmented, Intermediate Coat",35,14.99,53,7006-IXN,Exterior,S Plymouth,19,S Plymouth Solubles Workshop,NY,1874 LAWLOR CIRCLE,13844
+33,BINDER PRIME,PREMIUM,Water,Top Coat,"Textured Coating, Latex, Flat",5,11.99,39,7158-LJP,Interior,Orchard Lake,22,Rivera Decor Partners,MI,1404 SEWARD NB ON TUDOR RAMP,48324
+31,VALU-MATTE,VALUE,Water,Primer,"Stain, Exterior, Water Based, Semi-Transparent",10,12.99,131,7179-YXG,Exterior,Rowsburg,15,Unlimited Wholesale of Ohio,OH,454 WINDJAMMER CIRCLE,44866
+27,HOME COMFORT,CONTRACTOR,Water,Top Coat,"Latex, Recycled (Consolidated), Exterior, Low Sheen (G 3-4)",35,43.99,94,7224-FEU,Exterior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+30,LONG HAUL,CONTRACTOR,Solvent,Top Coat,"Stain, Interior, for Concrete Floors",10,23.99,50,7231-UES,Interior,Rowsburg,15,Unlimited Wholesale of Ohio,OH,454 WINDJAMMER CIRCLE,44866
+35,LE MODE,PREMIUM,Solvent,Primer,"Primer, Alkyd, Anti-Corrosive for Metal",35,10.99,30,7258-HCV,Interior,Baltimore,8,Baltimore Paints Consolidated,MD,222 SEWARD 34TH RAMP,21222
+35,LE MODE,PREMIUM,Water,Top Coat,"Light Industrial Coating, Interior, Water Based, Semi-Gloss (MPI Gloss Level 5)",20,15.59,25,7260-YDI,Interior,Irvington,20,Irvington Wholesale Workshop,KY,527 ELDERBERRY STREET,40146
+33,BINDER PRIME,PREMIUM,Solvent,Top Coat,Aluminum Paint,30,12.99,36,7316-MQD,Exterior,Orchard Lake,22,Rivera Decor Partners,MI,1404 SEWARD NB ON TUDOR RAMP,48324
+31,VALU-MATTE,VALUE,Water,Primer,"Primer, Galvanized, Water Based",30,13.59,62,7355-WBT,Interior,Pine Hill,6,Pine Hill Chemical Warehouse,PA,1777 EASTWIND COURT,17901
+30,LONG HAUL,CONTRACTOR,Solvent,Top Coat,"Heat Resistant Coating, (Up to 205°C/402°F), MPI Gloss Level 5-6 ",5,23.99,53,7500-ROG,Interior,Orchard Lake,22,Rivera Decor Partners,MI,1404 SEWARD NB ON TUDOR RAMP,48324
+25,STUTTENFURST,CONTRACTOR,Water,Top Coat,"Floor Paint, Latex, Gloss ",40,21.99,76,7532-PYJ,Interior,Rowsburg,15,Unlimited Wholesale of Ohio,OH,454 WINDJAMMER CIRCLE,44866
+33,BINDER PRIME,PREMIUM,Solvent,Primer,"Primer, Zinc Rich, Inorganic",25,8.99,95,7538-ITC,Interior,Orchard Lake,22,Rivera Decor Partners,MI,1404 SEWARD NB ON TUDOR RAMP,48324
+31,VALU-MATTE,VALUE,Solvent,Primer,"Primer, Epoxy, Anti-Corrosive, for Metal",10,14.99,15,7551-ZVS,Exterior,Pine Hill,6,Pine Hill Chemical Warehouse,PA,1777 EASTWIND COURT,17901
+28,OLDE TYME QUALITY,CONTRACTOR,Solvent,Top Coat,"Floor Enamel, Alkyd, Gloss (MPI Gloss Level 6)",40,11.59,128,7627-HHI,Interior,Laporte,11,Super Solubles of Pennsylvania,PA,1951 WEST 28TH COURT,18626
+27,HOME COMFORT,CONTRACTOR,Water,Top Coat,"Latex, Interior, Gloss (MPI GLoss Level 6)",25,19.99,15,7658-HCW,Interior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+25,STUTTENFURST,CONTRACTOR,Solvent,Top Coat,"Stain, Exterior, Solvent Based, Solid Hide",15,11.99,122,7673-ECV,Exterior,Arlington,13,Boykin Chemical Workshop,VA,200 AERO AVENUE,22218
+35,LE MODE,PREMIUM,Water,Top Coat,"Varnish, Exterior, Water Based, (Semi-Gloss) MPI Gloss Level 5",35,13.39,109,7731-GBG,Exterior,Grand Ledge,7,Kenny Paints Workshop,MI,1286 RICHARD EVELYN BYRD STREET,48837
+29,BUSTERS,VALUE,Solvent,Top Coat,"Lacquer, Clear, Satin",35,14.99,56,7762-STV,Interior,Linden,17,Linden Consolidated,MI,1353 STEPHEN CIRCLE,48451
+35,LE MODE,PREMIUM,Solvent,Top Coat,"Water Repellent, Clear (Paintable)",15,15.59,57,7804-ZVW,Interior,Grand Ledge,7,Kenny Paints Workshop,MI,1286 RICHARD EVELYN BYRD STREET,48837
+23,FORESTERS BEST,VALUE,Water,Primer,"Primer, Rust-Inhibitive, Water Based",25,12.59,29,7883-NLQ,Interior,Lake Lynn,3,Leal Decor Workshop,PA,1105 OLSON CIRCLE,15439
+25,STUTTENFURST,CONTRACTOR,Solvent,Top Coat,Polyurethane Deck Coating (Slip-Resistant),25,25.99,28,8053-PME,Interior,Linden,17,Linden Consolidated,MI,1353 STEPHEN CIRCLE,48451
+27,HOME COMFORT,CONTRACTOR,Solvent,Top Coat,"Lacquer, Pigmented, Satin",40,14.59,50,8094-EYX,Interior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+31,VALU-MATTE,VALUE,Solvent,Primer,"Primer, Zinc Rich, Epoxy",10,9.49,73,8162-KJI,Exterior,Ripley,4,Ripley Warehouse,TN,1278 STORMY PLACE,38063
+35,LE MODE,PREMIUM,Solvent,Top Coat,"Polyurethane, Moisture Cured, Pigmented, Gloss (MPI Gloss Level 6)",5,16.99,73,8170-EKF,Exterior,Lake Lynn,3,Leal Decor Workshop,PA,1105 OLSON CIRCLE,15439
+33,BINDER PRIME,PREMIUM,Water,Top Coat,"Varnish, Exterior, Water Based, (Satin-Like) MPI Gloss Level 4",10,12.99,105,8199-YRF,Exterior,Orchard Lake,22,Rivera Decor Partners,MI,1404 SEWARD NB ON TUDOR RAMP,48324
+35,LE MODE,PREMIUM,Water,Top Coat,"Latex, Interior, High Performance Architectural, ('satin-like' - MPI Gloss Level 4)",15,34.49,14,8207-YYG,Interior,Newport,16,National Solubles Partners,NC,1618 CARIN PLACE,28570
+31,VALU-MATTE,VALUE,Water,Top Coat,"Textured Coating, Latex, Non-Flat",15,11.99,51,8310-LAC,Exterior,Westfield,14,Watkins Wholesale Warehouse,MA,632 GLENN NB ON MULDOON RAMP,1086
+25,STUTTENFURST,CONTRACTOR,Solvent,Cleaner,"Preservative Oil, Gloss",25,12.99,50,8322-JEX,Interior,Linden,17,Linden Consolidated,MI,1353 STEPHEN CIRCLE,48451
+28,OLDE TYME QUALITY,CONTRACTOR,Solvent,Top Coat,"Alkyd, Quick Dry, Gloss",40,17.99,118,8338-JZU,Exterior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+30,LONG HAUL,CONTRACTOR,Water,Top Coat,"Textured Coating, Latex, Non-Flat",5,11.99,20,8382-HKN,Interior,Rowsburg,15,Unlimited Wholesale of Ohio,OH,454 WINDJAMMER CIRCLE,44866
+31,VALU-MATTE,VALUE,Solvent,Top Coat,"Lacquer, Clear, Gloss",25,14.99,49,8400-JDC,Interior,Beebe Plain,2,Warren Paints Consolidated,VT,377 LONGHORN STREET,5823
+33,BINDER PRIME,PREMIUM,Water,Primer,"Primer, Bonding, Water Based",15,7.99,119,8406-TQG,Interior,Orchard Lake,22,Rivera Decor Partners,MI,1404 SEWARD NB ON TUDOR RAMP,48324
+28,OLDE TYME QUALITY,CONTRACTOR,Solvent,Filler,"Block Filler, Epoxy",10,7.79,84,8436-MGP,Exterior,Mt Blanchard,1,Mt Blanchard Solvents Supplies,OH,1625 BAY VIEW DRIVE,45867
+33,BINDER PRIME,PREMIUM,Solvent,Top Coat,"Vinyl, High Build",5,17.99,76,8439-KUP,Exterior,Orchard Lake,22,Rivera Decor Partners,MI,1404 SEWARD NB ON TUDOR RAMP,48324
+23,FORESTERS BEST,VALUE,Solvent,Top Coat,"Varnish, Aliphatic Polyurethane, Two-Component",40,12.29,111,8495-ZQR,Exterior,Beebe Plain,2,Warren Paints Consolidated,VT,377 LONGHORN STREET,5823
+30,LONG HAUL,CONTRACTOR,Solvent,Top Coat,"Alkyd, Quick Dry, Semi-Gloss",10,21.59,139,8523-UCB,Exterior,Rowsburg,15,Unlimited Wholesale of Ohio,OH,454 WINDJAMMER CIRCLE,44866
+31,VALU-MATTE,VALUE,Solvent,Top Coat,"Floor Paint, Alkyd, Low Gloss ",5,21.99,10,8543-RJN,Interior,Newport,16,National Solubles Partners,NC,1618 CARIN PLACE,28570
+35,LE MODE,PREMIUM,Solvent,Top Coat,"Traffic Marking Paint, Alkyd",25,6.59,16,8544-CIQ,Interior,South Miami,12,International Decor Partners,FL,355 WILDWOOD DRIVE,33143
+28,OLDE TYME QUALITY,CONTRACTOR,Solvent,Top Coat,"Varnish, Polyurethane, Moisture Cured, Gloss (MPI Gloss Level 6)",5,17.79,46,8571-CKP,Exterior,Sweek Hollow,5,National Wholesale Consolidated,VT,1185 BIGLERVILLE CIRCLE,5483
+30,LONG HAUL,CONTRACTOR,Solvent,Primer,"Primer, Quick Dry, for Aluminum",25,19.99,66,8685-REM,Exterior,Linden,17,Linden Consolidated,MI,1353 STEPHEN CIRCLE,48451
+29,BUSTERS,VALUE,Solvent,Top Coat,"Floor Paint, Alkyd, Low Gloss ",15,21.99,107,8726-ZNM,Exterior,Brookfield,10,Lambert Decor of New Hampshire,NH,1839 DEMEURE PLACE,3872
+25,STUTTENFURST,CONTRACTOR,Solvent,Top Coat,"Epoxy, Gloss",10,7.79,19,8751-IOK,Interior,Brimstone Corners,18,Ledbetter Chemical of Vermont,VT,1174 SPRUCEWOOD STREET,5761
+35,LE MODE,PREMIUM,Water,Top Coat,"Barrier Coating, Two Coat, Low VOC for Industrial Maintenance",40,34.99,103,8821-DDM,Exterior,Huntington,9,Donahue Solubles of West Virginia,WV,382 FLORENCE CIRCLE,25700
+25,STUTTENFURST,CONTRACTOR,Solvent,Top Coat,"Varnish, Interior, Polyurethane, Oil Modified, Satin",35,6.59,30,8841-JFP,Interior,Sweek Hollow,5,National Wholesale Consolidated,VT,1185 BIGLERVILLE CIRCLE,5483
+27,HOME COMFORT,CONTRACTOR,Solvent,Sealer,"Lacquer, Sanding Sealer, Clear",40,13.99,79,8894-LUR,Interior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+28,OLDE TYME QUALITY,CONTRACTOR,Water,Top Coat,"Varnish, Water Based, Clear, Gloss",30,15.79,36,8909-SPD,Interior,Pine Hill,6,Pine Hill Chemical Warehouse,PA,1777 EASTWIND COURT,17901
+28,OLDE TYME QUALITY,CONTRACTOR,Solvent,Sealer,"Lacquer, Sanding Sealer, White",30,3.29,12,8937-WVA,Interior,Beebe Plain,2,Warren Paints Consolidated,VT,377 LONGHORN STREET,5823
+28,OLDE TYME QUALITY,CONTRACTOR,Solvent,Primer,"Primer, Alkyd, Quick Dry, for Metal",30,11.99,110,8988-FDW,Exterior,Grand Ledge,7,Kenny Paints Workshop,MI,1286 RICHARD EVELYN BYRD STREET,48837
+33,BINDER PRIME,PREMIUM,Solvent,Primer,"Primer, Vinyl Wash",5,7.59,15,9064-IWN,Exterior,Orchard Lake,22,Rivera Decor Partners,MI,1404 SEWARD NB ON TUDOR RAMP,48324
+27,HOME COMFORT,CONTRACTOR,Water,Top Coat,"Latex, Recycled (Consolidated), Interior (MPI Gloss Level 3)",30,48.59,12,9126-PWF,Interior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+30,LONG HAUL,CONTRACTOR,Solvent,Primer,"Primer, Quick Dry, for Aluminum",20,19.99,89,9133-OXA,Interior,Newport,16,National Solubles Partners,NC,1618 CARIN PLACE,28570
+28,OLDE TYME QUALITY,CONTRACTOR,Solvent,Top Coat,"Alkyd, Quick Dry, Semi-Gloss",15,21.59,107,9138-QCV,Interior,Orchard Lake,22,Rivera Decor Partners,MI,1404 SEWARD NB ON TUDOR RAMP,48324
+27,HOME COMFORT,CONTRACTOR,Solvent,Top Coat,"Epoxy, High Build, Gloss",40,13.59,15,9175-TAZ,Interior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+29,BUSTERS,VALUE,Solvent,Top Coat,"Alkyd, Interior, Gloss (MPI Gloss Level 6) ",35,14.99,88,9191-NGA,Interior,Ripley,4,Ripley Warehouse,TN,1278 STORMY PLACE,38063
+35,LE MODE,PREMIUM,Water,Top Coat,"Stain, Exterior, Water Based, Solid Hide",35,13.99,135,9234-WCQ,Exterior,Laporte,11,Super Solubles of Pennsylvania,PA,1951 WEST 28TH COURT,18626
+25,STUTTENFURST,CONTRACTOR,Solvent,Top Coat,"Alkyd, Interior, Semi-Gloss (MPI Gloss Level 5) ",25,13.99,64,9268-RCB,Interior,Westfield,14,Watkins Wholesale Warehouse,MA,632 GLENN NB ON MULDOON RAMP,1086
+27,HOME COMFORT,CONTRACTOR,Solvent,Top Coat,"Varnish, Marine Spar, Exterior, Gloss (MPI Gloss Level 6)",35,13.29,87,9272-LTP,Exterior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+28,OLDE TYME QUALITY,CONTRACTOR,Water,Top Coat,"Varnish, Exterior, Water Based, (High Gloss) MPI Gloss Level 7",30,13.39,83,9276-MVX,Exterior,Mt Blanchard,1,Mt Blanchard Solvents Supplies,OH,1625 BAY VIEW DRIVE,45867
+25,STUTTENFURST,CONTRACTOR,Water,Top Coat,"Varnish, Water Based, Clear (eggshell-like) MPI Gloss Level 3",15,14.59,118,9288-IRF,Interior,Grand Ledge,7,Kenny Paints Workshop,MI,1286 RICHARD EVELYN BYRD STREET,48837
+28,OLDE TYME QUALITY,CONTRACTOR,Solvent,Top Coat,"Aluminum Paint, High Heat (up to 590° C/1100° F)",10,32.99,24,9292-RQZ,Interior,Newport,16,National Solubles Partners,NC,1618 CARIN PLACE,28570
+27,HOME COMFORT,CONTRACTOR,Solvent,Primer,"Primer, Zinc Rich, Organic",30,11.99,5,9324-PPG,Interior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+29,BUSTERS,VALUE,Water,Top Coat,"Latex, Interior, ('eggshell-like' - MPI Gloss Level 3) ",40,11.99,52,9336-MHC,Interior,Sweek Hollow,5,National Wholesale Consolidated,VT,1185 BIGLERVILLE CIRCLE,5483
+23,FORESTERS BEST,VALUE,Solvent,Top Coat,"Epoxy, High Build, Self Priming, Low Gloss",35,29.99,73,9355-MNT,Interior,Lake Lynn,3,Leal Decor Workshop,PA,1105 OLSON CIRCLE,15439
+30,LONG HAUL,CONTRACTOR,Solvent,Top Coat,"Varnish, Polyurethane, Moisture Cured, Flat (MPI Gloss Level 1)",25,13.59,51,9393-RFA,Interior,Rowsburg,15,Unlimited Wholesale of Ohio,OH,454 WINDJAMMER CIRCLE,44866
+30,LONG HAUL,CONTRACTOR,Solvent,Top Coat,"Fire Retardant Top-Coat, Exterior, Low Sheen (ULC Approved)",15,21.99,86,9408-WNM,Exterior,Rowsburg,15,Unlimited Wholesale of Ohio,OH,454 WINDJAMMER CIRCLE,44866
+33,BINDER PRIME,PREMIUM,Solvent,Top Coat,"Varnish, Aliphatic Polyurethane, Two-Component",5,12.29,101,9413-EHI,Interior,Orchard Lake,22,Rivera Decor Partners,MI,1404 SEWARD NB ON TUDOR RAMP,48324
+30,LONG HAUL,CONTRACTOR,Solvent,Top Coat,"Varnish, Fire Retardant (ULC Approved), Exterior",20,17.99,129,9484-UTK,Exterior,Rowsburg,15,Unlimited Wholesale of Ohio,OH,454 WINDJAMMER CIRCLE,44866
+29,BUSTERS,VALUE,Solvent,Top Coat,"Epoxy, High Build, Low Gloss",15,13.59,65,9569-WMK,Interior,Huntington,9,Donahue Solubles of West Virginia,WV,382 FLORENCE CIRCLE,25700
+25,STUTTENFURST,CONTRACTOR,Solvent,Primer,"Primer, Alkyd for Exterior Wood",35,8.99,92,9601-ZKZ,Exterior,Orchard Lake,22,Rivera Decor Partners,MI,1404 SEWARD NB ON TUDOR RAMP,48324
+33,BINDER PRIME,PREMIUM,Solvent,Primer,"Primer, Zinc Rich, Organic",20,11.99,77,9624-YLU,Exterior,Orchard Lake,22,Rivera Decor Partners,MI,1404 SEWARD NB ON TUDOR RAMP,48324
+30,LONG HAUL,CONTRACTOR,Solvent,Top Coat,"Lacquer, Pigmented, Gloss",5,14.59,51,9671-NYZ,Interior,Rowsburg,15,Unlimited Wholesale of Ohio,OH,454 WINDJAMMER CIRCLE,44866
+35,LE MODE,PREMIUM,Water,Top Coat,"Varnish, Water Based, Clear, Semi-Gloss",25,15.29,73,9686-HQV,Interior,Arlington,13,Boykin Chemical Workshop,VA,200 AERO AVENUE,22218
+30,LONG HAUL,CONTRACTOR,Solvent,Cleaner,"Linseed Oil, Boiled",15,12.99,67,9688-ZUX,Exterior,Rowsburg,15,Unlimited Wholesale of Ohio,OH,454 WINDJAMMER CIRCLE,44866
+35,LE MODE,PREMIUM,Solvent,Primer,"Primer, Quick Dry, for Shop Application to Interior Steel",5,35.49,134,9702-WFX,Interior,Sweek Hollow,5,National Wholesale Consolidated,VT,1185 BIGLERVILLE CIRCLE,5483
+25,STUTTENFURST,CONTRACTOR,Solvent,Primer,"Primer, Zinc Rich, Epoxy",40,9.99,85,9786-DGO,Interior,Orchard Lake,22,Rivera Decor Partners,MI,1404 SEWARD NB ON TUDOR RAMP,48324
+27,HOME COMFORT,CONTRACTOR,Solvent,Top Coat,"Fire Retardant Top-Coat, Clear, Alkyd, Interior (ULC Approved)",25,29.99,137,9838-FUF,Interior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625
+28,OLDE TYME QUALITY,CONTRACTOR,Water,Top Coat,"Alkyd, Water Based, Gloss (MPI Gloss Level 6)",20,25.59,58,9857-ESX,Interior,Lake Lynn,3,Leal Decor Workshop,PA,1105 OLSON CIRCLE,15439
+29,BUSTERS,VALUE,Solvent,Top Coat,"Lacquer, Pigmented, Semi-Gloss",35,14.59,72,9858-XUM,Interior,Laporte,11,Super Solubles of Pennsylvania,PA,1951 WEST 28TH COURT,18626
+30,LONG HAUL,CONTRACTOR,Water,Top Coat,"Latex, Interior, Institutional Low Odor/VOC, ('velvet-like' - MPI Gloss Level 2) ",35,29.99,129,9955-WWB,Interior,Cross Jct,21,Internation Solvents of Virginia,VA,1492 AUSTIN AVENUE,22625

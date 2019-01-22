@@ -1,0 +1,29 @@
+1 cleaned data removed all special characters using a python script to make it utf-8 encoding
+- separated into the required 10 tables
+2 invoice table had two invoices with the same number
+	- kept the first created invoice based on date,customer number
+3 there were 3 extra tab spaces at the end in dataset 3 that was leading to 3 empty/dummy columns being created
+	- removed those before starting processing
+4 removed an empty row from vendor table which was a copy for VEND_ID = 15 and had no data in the VEND_NAME and VEND_STREET fields 
+5 changed employee_id to emp_num in invoice table
+6 changed emp_num tp supv_emp_num in department table
+7 fixed datetime field emp_hiredate in employee
+8 fixed datetime field inv_date in invoice
+9 fixed datetime field sal_from in salary_history
+10 fixed datetime field sal_end in salary history
+11 cleaned data in sal_end defaulting " - " to NULL
+12 removed the not null condition from the constraints for the sal_end column in salary_history
+13 There are no invoices with more than one line item which is very very weird
+14 There are no sales beyond jan2014 so the 4th question gives a zero output
+15 There are no invoices with sealer and top coat of the same brand in thems
+
+?? fucking look at vend zip and other zips too i guess
+?? need to create primary keys for tables that dont have one
+?? connections need to be reverified
+?? need to look at the constraints shit again
+?? redownload the instructions thing and datasets again and rerun the whole thing
+
+- created tables for each in mysql with the given constraints
+- loaded data into mysql tables
+- created ER diagrams using dbeaver
+- 
