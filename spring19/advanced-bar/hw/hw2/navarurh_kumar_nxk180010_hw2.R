@@ -1,4 +1,4 @@
-setwd('c:/data/BUAN6357/HW_2'); source('prep.txt', echo=T)
+#setwd('c:/data/BUAN6357/HW_2'); source('prep.txt', echo=T)
 
 #codeset from alookanalytics
 
@@ -68,4 +68,4 @@ all.equal(y1, y2)
 all.equal(in_circle1, in_circle2)
 all.equal(my_pi1, my_pi2)
 
-source('validate.txt', echo=T)
+#source('validate.txt', echo=T)
