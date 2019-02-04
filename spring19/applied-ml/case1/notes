@@ -1,0 +1,10 @@
+data cleaning
+    - removing nans via imputation
+    - converting non numerical values
+        - categoricals - bool/etc
+        - ordinals - proc just order using nat numbers
+        - textual values proc using nltk
+
+
+titanic
+    - embarked variable sees one hot encoding
