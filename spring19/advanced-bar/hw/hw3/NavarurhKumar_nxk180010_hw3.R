@@ -1,43 +1,24 @@
 setwd('c:/data/BUAN6357/HW_3'); source('prep.txt', echo=T)
 
-#libs used
 library(MASS)
+library(tidyverse)
+library(broom)
 
-#df declaration and hc dendro creation
-df <- Boston
-hc <- hclust(dist(df))
+hc <- hclust(dist(Boston)^2)
 
-#defining cutree limits
-x <- c(1:25)
+hc.twss <- rep(0,25)
+tb <- Boston
 
-#creating cutree's for all cluster counts
-hc.clusts <- as.data.frame(cutree(hc,k = x))
-
-#temping df
-dft <- df
-#temp holder for wss values
-temp <- matrix(0, nrow = 25, ncol = 25)
-
-#looping to evaluate individual wss values
 for (i in 1:25)
 {
-  dft$clust <- hc.clusts[,i]
-  for (j in 1:i)
+  t <- cutree(hc,i)
+  tb <- Boston
+  tb$clusters <- t
+  sse <- tb %>% group_by(clusters) %>% do(wss=sum(scale(.,center = T,scale = F)^2)) %>% as.data.frame
+  for(j in 1:nrow(sse))
   {
-    dfts <- dft[which(dft$clust == j),]
-    a <- as.matrix(dist(dfts))
-    b <- a^2
-    temp[i,j] <- sum(b)/2
+    hc.twss[i] <- hc.twss[i] + sse$wss[[j]][1]
   }
-}
-
-#temp holder for total wss
-hc.twss <- rep(-1,25)
-
-#simple summing to get twss values
-for(i in 1:25)
-{
-  hc.twss[i] <- sum(temp[i,])
 }
 
 source('validate.txt', echo=T)
