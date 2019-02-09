@@ -22,3 +22,16 @@ for (i in 1:25)
 }
 
 source('validate.txt', echo=T)
+
+#q1 hc.twss[3]/max(hc.twss)
+#   0.1605755
+#q2 hc.twss/max(hc.twss) < .1
+#   6
+#q3 hc.twss[3]
+#   3115335.8
+#q4 hc.twss[5]
+#   2000643.4
+#q5 diff(hc.twss)
+#   
+#q6 abs(diff(hc.twss/max(hc.twss)))
+#   3
