@@ -4,3 +4,4 @@ multiple logit use
 - bayes risk will be a simple complement of  of the max prob classification obtained from which.max
 - which.max provides location of max value in a vector
 - apply(matrixname,1/2,func//which.max goes here//)
+-
