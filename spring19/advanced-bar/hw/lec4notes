@@ -1,0 +1,6 @@
+multiple logit use
+- which.max to get rowwise max
+- apply func to get each max out for classification // c(1,2,3)[v]
+- bayes risk will be a simple complement of  of the max prob classification obtained from which.max
+- which.max provides location of max value in a vector
+- apply(matrixname,1/2,func//which.max goes here//)
