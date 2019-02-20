@@ -1,0 +1,49 @@
+###
+#
+#  how to: multi-group assignment
+#
+# scenario:
+#     An observation needs to be assigned to 1 of several groups.  The values
+#     relating to each group are already present in a matrix (or dataframe).
+#     From these values, you want to find the location of the min (or max) and
+#     the corresponding value. Location will indicate group membership.
+#
+###
+#
+# History
+#
+#     20190214  Initial code (wj)
+#
+###
+#
+# constants
+#
+#
+byRow   <- 1
+byCol   <- 2
+
+seed    <- 1  # not great, but provides reproducibility
+
+set.seed(seed)
+
+# test case: specify matrix size and fill it
+r       <- 2
+c       <- 3
+
+t       <- runif(r*c)        # U(0,1)
+(m      <- matrix(data=t,
+                  ncol=c,
+                  byrow=T) )
+				
+# case 1: find location of row min and value
+(locMin <- apply(m,byRow,which.min) )
+(rMin   <- apply(m,byRow,min)       )
+
+# case 2: find location of row max and value
+(locMax <- apply(m,byRow,which.max) )
+(rMax   <- apply(m,byRow,max)       )
+
+# and the row sum (total) if scaling is required
+(rTot   <- apply(m,byRow,sum)       )
+
+

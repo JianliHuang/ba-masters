@@ -1,0 +1,27 @@
+###
+#
+# Random number generator: setup, check-point, and restore
+#
+# minor adaptation from: http://www.cookbook-r.com/Numbers/Saving_the_state_of_the_random_number_generator/
+#
+###
+# setup
+set.seed(423)
+( t1 <- runif(3) )
+
+# check-point
+oldSeed <- .Random.seed
+( t2 <- runif(3) )
+
+# run the system forward
+t3 <- runif(100000)
+
+# show that the sequence is different
+( t4 <- runif(3) )
+
+# restore
+.Random.seed <- oldSeed
+( t5 <- runif(3) )
+
+# check results
+t5 - t2

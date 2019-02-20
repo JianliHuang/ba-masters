@@ -1,0 +1,14 @@
+###
+#
+# data re-scale options
+#
+#
+
+# base R: scale(x,center=,scale=) function - change "x" to standard normal
+#   with or without external reference values
+#   see ?scale
+
+# linear re-scale (user function) no distributional assumptions
+lscale <- function (v) {
+   return( (v-min(v))/(max(v)-min_v)) )
+   }
