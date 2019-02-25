@@ -13,15 +13,14 @@ df.isna().any()
 df.horsepower = pd.to_numeric(df.horsepower)
 df['horsepower'] = df['horsepower'].fillna(df.groupby('cylinders')['horsepower'].transform('median'))
 
-df2.isna().any()
-
 #scaling and splitting
 X = df
 X.drop('car name',axis=1,inplace=True)
 y = X.mpg
 X.drop('mpg',axis=1,inplace=True)
-X.drop('model year',axis=1,inplace=True)
-X_train_org, X_test_org, y_train, y_test = train_test_split(X, y, random_state = 0, test_size = 0.2)
+#X.drop('model year',axis=1,inplace=True)
+#need to remove the test size as it was not asked to be set in the instructions for the lab
+X_train_org, X_test_org, y_train, y_test = train_test_split(X, y, random_state = 0)#, test_size = 0.2)
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train_org)
 X_test = scaler.transform(X_test_org)
