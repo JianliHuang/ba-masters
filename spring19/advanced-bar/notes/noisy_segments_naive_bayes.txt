@@ -1,0 +1,126 @@
+###
+#
+# Synthetic Data
+#
+# generate CART noisy display data
+#
+###
+#  History  
+#
+#          20180125  wj  code adapted from longintro_RPART.pdf Example 4.3
+#          20190218  wj  3 classification techniques: each-v-other (logit
+#                        and tree) and multinomial (tree)
+#          20190222  wj  added 3 category multinomial to better display classification tree
+#          20190227  wj  stripped code down for a naive bayes only example (plan to incorporate
+#                        this back into the "multiclassif" version for next semester
+#
+###
+#
+#  This code is designed to 
+#       (1) illustrate the generation of synthetic data
+#           based on a system model
+#       (2) demonstrate 1 approache to multi-category
+#           classification 
+#
+#  Coded to be run in total.  Be aware of variable re-use.
+#  
+#
+###
+#
+# external packages
+#
+#require(partykit)       # for ctree()
+require(bnlearn)
+
+# constants
+cols      <- 7
+byRows    <- 1
+byCols    <- 2
+seed      <- 1          # not a great choice
+
+## parameters
+n         <- 50    # number of replications per digit (small for fast test)
+p         <- 0.9   # probability a segment works correctly
+
+# flags
+debug     <- T
+plots     <- T
+verbose   <- F
+demo3     <- T
+
+# to help reading of code
+classes   <- c(0,1,2,3,4,5,6,7,8,9)
+minDigit  <- min(classes)
+maxDigit  <- max(classes)
+numDigits <- length(classes)
+
+###
+# generate simulated data observations
+# (intermediate step results retained for possible inspection)
+#
+###
+# initialize
+set.seed(seed)
+ 
+# digits (copies of each digit)
+t1 <- rep(classes, n)
+# segment patterns for each digit
+t2 <- c(1,1,1,0,1,1,1,
+        0,0,1,0,0,1,0,
+        1,0,1,1,1,0,1,
+        1,0,1,1,0,1,1,
+        0,1,1,1,0,1,0,
+        1,1,0,1,0,1,1,
+        0,1,0,1,1,1,1,
+        1,0,1,0,0,1,0,
+        1,1,1,1,1,1,1,
+        1,1,1,1,0,1,0)
+
+t3 <- rep(t2, n)                 # noiseless data
+t4 <- rbinom(length(t3), 1, 1-p) # probability of failure event (noise)
+
+# flip the bits to add noise [ t4 == 1 designates failure event ]
+t5 <- ifelse(t4 == 1, 1-t3, t3)
+
+# reshape
+t5                  <- matrix(data=t5, nrow=length(classes)*n, ncol=cols, byrow=T)
+dim(t1)             <- c(length(t1), 1)
+t6                  <- cbind(t1, t5)
+simDigits           <- as.data.frame(t6)
+
+colnames(simDigits) <- c("digit", "s1", "s2", "s3", "s4", "s5", "s6", "s7")
+
+# 
+#
+# fit classification model: naive bayes
+#
+#  this function expects all inputs to be factor variables
+#       (there is probably a better way to do this)
+#
+nbDigits            <- simDigits
+nbDigits$digit      <- as.factor(nbDigits$digit)
+nbDigits$s1         <- as.factor(nbDigits$s1)
+nbDigits$s2         <- as.factor(nbDigits$s2)
+nbDigits$s3         <- as.factor(nbDigits$s3)
+nbDigits$s4         <- as.factor(nbDigits$s4)
+nbDigits$s5         <- as.factor(nbDigits$s5)
+nbDigits$s6         <- as.factor(nbDigits$s6)
+nbDigits$s7         <- as.factor(nbDigits$s7)
+
+nb                  <- naive.bayes(nbDigits,training="digit")
+
+pred.nb             <- predict(nb, nbDigits, prob=T)
+probs.nb            <- t( attr(pred.nb,"prob") )        # transpose the result to get obs in rows
+
+(hits.nb            <- table(pred.nb, nbDigits$digit) )
+(pc.nb              <- sum(diag(hits.nb))/sum(hits.nb) )
+
+# min Bayes Risk classification
+index               <- apply(probs.nb, byRows, which.max)
+class.nb            <- classes[index]
+summary(apply(probs.nb, byRows, sum))                    # if they are all 1.0 then no need to re-scale (should be true here)
+(hits.nbMB          <- table(pred.nb, class.nb) )
+(pc.nmMB            <- sum(diag(hits.nbMB))/sum(hits.nbMB)) # percent agreement with reported predictions
+risk.nb             <- 1-apply(probs.nb, byRows, max)    # Bayes Risk is p(wrong), so find max value and complement
+
+boxplot(risk.nb)

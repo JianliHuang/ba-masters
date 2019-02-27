@@ -1,0 +1,223 @@
+###
+#
+# Synthetic Data
+#
+# generate CART noisy display data
+#
+###
+#  History  
+#
+#          20180125  wj  code adapted from longintro_RPART.pdf Example 4.3
+#          20190218  wj  3 classification techniques: each-v-other (logit
+#                        and tree) and multinomial (tree)
+#          20190222  wj  added 3 category multinomial to better display classification tree
+#
+###
+#
+#  This code is designed to 
+#       (1) illustrate the generation of synthetic data
+#           based on a system model
+#       (2) demonstrate multiple approaches to multi-category
+#           classification 
+#
+#  Coded to be run in total.  Be aware of variable re-use.
+#  
+#
+###
+#
+# external packages
+#
+require(partykit)       # for ctree()
+
+# constants
+cols      <- 7
+byRows    <- 1
+byCols    <- 2
+seed      <- 1          # not a great choice
+
+## parameters
+n         <- 50    # number of replications per digit (small for fast test)
+p         <- 0.9   # probability a segment works correctly
+
+# flags
+debug     <- T
+plots     <- T
+verbose   <- F
+demo3     <- T
+
+# to help reading of code
+classes   <- c(0,1,2,3,4,5,6,7,8,9)
+minDigit  <- min(classes)
+maxDigit  <- max(classes)
+numDigits <- length(classes)
+
+###
+# generate simulated data observations
+# (intermediate step results retained for possible inspection)
+#
+###
+# initialize
+set.seed(seed)
+ 
+# digits (copies of each digit)
+t1 <- rep(classes, n)
+# segment patterns for each digit
+t2 <- c(1,1,1,0,1,1,1,
+        0,0,1,0,0,1,0,
+        1,0,1,1,1,0,1,
+        1,0,1,1,0,1,1,
+        0,1,1,1,0,1,0,
+        1,1,0,1,0,1,1,
+        0,1,0,1,1,1,1,
+        1,0,1,0,0,1,0,
+        1,1,1,1,1,1,1,
+        1,1,1,1,0,1,0)
+
+t3 <- rep(t2, n)                 # noiseless data
+t4 <- rbinom(length(t3), 1, 1-p) # probability of failure event (noise)
+
+# flip the bits to add noise [ t4 == 1 designates failure event ]
+t5 <- ifelse(t4 == 1, 1-t3, t3)
+
+# reshape
+t5                  <- matrix(data=t5, nrow=length(classes)*n, ncol=cols, byrow=T)
+dim(t1)             <- c(length(t1), 1)
+t6                  <- cbind(t1, t5)
+simDigits           <- as.data.frame(t6)
+
+colnames(simDigits) <- c("digit", "s1", "s2", "s3", "s4", "s5", "s6", "s7")
+
+# 
+#
+# fit classification models
+#
+# 10x logit:   each v. other (current)
+# 10x tree:    each v. other
+#  1x tree:    multinomial (factor)
+#
+#
+###
+#
+# setup: 10x logit
+#
+td            <- simDigits  # create temp copy
+fitted.logit  <- matrix(rep(NA,nrow(td)*numDigits), nrow=nrow(td) )
+digits        <- td$digit   # save for later use (and re-use)
+td$digit      <- NULL       # strip this out for convenience in model spec
+
+# fit: get predictions from individual models
+for ( i in 1:length(classes) ) {
+    d                 <- classes[i]
+    td$y              <- digits*0  # initialize
+    td$y[digits == d] <- 1         # indicator for -each- digit
+    m                 <- glm(y ~ ., data=td, family=binomial())
+    fitted.logit[,i]  <- m$fitted.values
+    }
+
+if (debug) summary(m)  # model for last category (digit: 9)
+
+# classify
+index       <- apply(fitted.logit, byRows, which.max) # location
+class.logit <- classes[index]
+scale.logit <- apply(fitted.logit, byRows, sum)
+p.logit     <- apply(fitted.logit, byRows, max)/scale.logit
+risk.logit  <- 1-p.logit                              # Bayes Risk
+if (debug) summary(scale.logit)
+
+(hits.logit <- table(class.logit, digits) )
+(pc.logit   <- sum(diag(hits.logit))/sum(hits.logit)) # percent correct             
+
+# cleanup
+td$y        <- NULL
+
+# quick query
+if (verbose) (td9         <- td[digits == 9, ])
+
+###
+#
+# 10x tree: each v. other
+#
+###
+#
+# setup
+#
+fitted.tree10 <- matrix(rep(NA,nrow(td)*numDigits), nrow=nrow(td) )
+
+# fit: get predictions from individual models
+for ( i in 1:length(classes) ) {
+    d                  <- classes[i]
+    td$y               <- digits*0  # initialize
+    td$y[digits == d]  <- 1         # indicator for -each- digit
+    m                  <- ctree(y ~ ., data=td)
+    fitted.tree10[,i]  <- predict(m)
+    }
+
+m # tree structure for last category
+
+# quick look
+if (plots) plot(m)
+
+# cleanup
+td$y         <- NULL
+
+# classify
+index        <- apply(fitted.tree10, byRows, which.max) # location
+class.tree10 <- classes[index]
+scale.tree10 <- apply(fitted.tree10, byRows, sum)
+p.tree10     <- apply(fitted.tree10, byRows, max)/scale.tree10
+risk.tree10  <- 1-p.tree10                               # Bayes Risk
+if (debug) summary(scale.tree10)
+
+(hits.tree10 <- table(class.tree10, digits) )
+(pc.tree10   <- sum(diag(hits.tree10))/sum(hits.tree10)) # percent correct             
+
+###
+#
+# 1 tree: multinomial
+#
+###
+#
+# setup
+#
+td$fDigits    <- as.factor(digits)  # triggers classification
+
+m             <- ctree(fDigits~.,data=td)
+
+fitted.tree1  <- predict(m)         
+p.tree1       <- predict(m,type="prob")  # individual class probabilities 
+# is p.tree1 row stochastic? if summary() is all -1- then: yes
+if (debug) summary(apply(p.tree1, byRows, sum))
+
+# find min Bayes Risk classification based on probabilities
+mbr.tree1     <- apply(p.tree1, byRows, which.max)
+risk.tree1    <- 1-apply(p.tree1, byRows, max)
+
+(hits.tree1   <- table(fitted.tree1, digits) )
+(pc.tree1     <- sum(diag(hits.tree1))/sum(hits.tree1)) # percent correct             
+
+if (debug) {
+    br.plots      <- data.frame(risk.tree1, risk.tree10, risk.logit)
+    boxplot(br.plots)
+
+    summary(br.plots)
+    }
+
+###
+#
+# classification with 1 tree for fewwer categories (simDigits with only 0, 1, and 2)
+#
+# (want to show tree plot more clearly)
+#
+###
+
+if (demo3) {
+   td3           <- simDigits             # create temp copy
+   td3           <- td3[ td3$digit < 3, ]  # subset to digits 0, 1, 2 (preserving original data)
+
+   td3$digit     <- as.factor(td3$digit)  # this should look familiar :-)
+
+   m3            <- ctree(digit~., data=td3)
+
+   plot(m3)      # note particularly the histograms in nodes 4 and 7 (where all categories are present)
+   }
+
