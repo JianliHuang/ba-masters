@@ -1,4 +1,4 @@
-setwd('c:/data/BUAN6357/HW_3'); source('prep.txt', echo=T)
+#setwd('c:/data/BUAN6357/HW_3'); source('prep.txt', echo=T)
 
 library(MASS)
 library(tidyverse)
@@ -21,7 +21,7 @@ for (i in 1:25)
   }
 }
 
-source('validate.txt', echo=T)
+#source('validate.txt', echo=T)
 
 #q1 hc.twss[3]/max(hc.twss)
 #   0.1605755
