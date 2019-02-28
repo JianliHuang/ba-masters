@@ -30,7 +30,7 @@
 require(DBI)
 
 # note: setwd() might be a good idea if you want to find the tables again
-wd   <- "c:/data/rsqlite"  # be sure this directory exists before use
+wd   <- "/home/navarurh/R/x86_64-pc-linux-gnu-library/3.5/RSQLite"  # be sure this directory exists before use
 setwd(wd)
 
 # comment: run the following commands individually and
