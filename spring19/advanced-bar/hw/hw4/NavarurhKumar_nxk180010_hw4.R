@@ -27,10 +27,6 @@ holdPCtree1 <- vector(mode="numeric", length=0)
 holdMedBRtree1 <- vector(mode="numeric", length=0)
 hold75BRtree1 <- vector(mode="numeric", length=0)
 
-ci_logit <- list()
-ci_tree10 <- list()
-ci_tree <- list()
-
 smpl <- list()
 
 #generating the full sample set; to be subsetted later
@@ -124,29 +120,22 @@ p.tree1       <- predict(m,type="prob")  # individual class probabilities
 mbr.tree1     <- apply(p.tree1, byRows, which.max)
 risk.tree1    <- 1-apply(p.tree1, byRows, max)
 hits.tree1   <- table(fitted.tree1, digits)
-pc.tree1     <- sum(diag(hits.tree1))/sum(hits.tree1) # percent correct             
-
+pc.tree1     <- sum(diag(hits.tree1))/sum(hits.tree1) # percent correct    
 
 #hw4 deliverables
-# holdPClogit <- c(holdPClogit, pc.logit)
-# holdMedBRlogit <- c(holdMedBRlogit, median(risk.logit))
-# hold75BRlogit <- c(hold75BRlogit, as.numeric(quantile(risk.logit, .75)))
-# holdPCtree10 <- c(holdPCtree10, pc.tree10)
-# holdMedBRtree10 <- c(holdMedBRtree10, median(risk.tree10))
-# hold75BRtree10 <- c(hold75BRtree10, as.numeric(quantile(risk.tree10, .75)))
-# holdPCtree1 <- c(holdPCtree1, pc.tree1)
-# holdMedBRtree1 <- c(holdMedBRtree1, median(risk.tree1))
-# hold75BRtree1 <- c(hold75BRtree1, as.numeric(quantile(risk.tree1, .75)))
-# ci_logit <- c(ci_logit,confint(pc.logit))
-# ci_tree10 <- c(ci_tree10,confint(pc.tree10))
-# ci_tree <- c(ci_tree,confint(pc.tree1))
+holdPClogit <- c(holdPClogit, pc.logit)
+holdMedBRlogit <- c(holdMedBRlogit, median(risk.logit))
+hold75BRlogit <- c(hold75BRlogit, as.numeric(quantile(risk.logit, .75)))
+holdPCtree10 <- c(holdPCtree10, pc.tree10)
+holdMedBRtree10 <- c(holdMedBRtree10, median(risk.tree10))
+hold75BRtree10 <- c(hold75BRtree10, as.numeric(quantile(risk.tree10, .75)))
+holdPCtree1 <- c(holdPCtree1, pc.tree1)
+holdMedBRtree1 <- c(holdMedBRtree1, median(risk.tree1))
+hold75BRtree1 <- c(hold75BRtree1, as.numeric(quantile(risk.tree1, .75)))
 }
 
+
+temp <- as.data.frame(rbind(nx*10,holdPClogit,holdPCtree1,holdPCtree10))
+
+
 #source('validate.txt', echo=T)
-n <- 5000
-x <- as.vector(diag(hits.tree10))/n
-xm <- mean(x)
-xs <- sd(x)
-e <- qnorm(0.975)*xs/sqrt(n)
-xm-e
-xm+e
