@@ -1,4 +1,4 @@
-setwd('c:/data/BUAN6357/HW_4'); source('prep.txt', echo=T)
+#setwd('c:/data/BUAN6357/HW_4'); source('prep.txt', echo=T)
 
 require(partykit)       # for ctree()
 # constants
@@ -7,7 +7,7 @@ byRows    <- 1
 byCols    <- 2
 seed      <- 1          # not a great choice
 ## parameters
-nx        <- c(25,50,100)    # number of replications per digit (small for fast test)
+nx        <- c(25,50,100,250,500,1000,2500,5000)    # number of replications per digit (small for fast test)
 p         <- 0.9   # probability a segment works correctly
 # to help reading of code
 classes   <- c(0,1,2,3,4,5,6,7,8,9)
@@ -27,10 +27,14 @@ holdPCtree1 <- vector(mode="numeric", length=0)
 holdMedBRtree1 <- vector(mode="numeric", length=0)
 hold75BRtree1 <- vector(mode="numeric", length=0)
 
+ci_logit <- list()
+ci_tree10 <- list()
+ci_tree <- list()
+
 smpl <- list()
 
 #generating the full sample set; to be subsetted later
-for (n in c(1:3))
+for (n in c(1:length(nx)))
 {
   set.seed(seed)
   t1 <- rep(classes, nx[n])
@@ -60,7 +64,7 @@ for (n in c(1:3))
 
 
 #running the scenarios for the different sample sizes based on the list of dfs smpl
-for (x in c(1:3))
+for (x in c(1:length(nx)))
 {
 td <- smpl[[x]]
 print(nrow(td))
@@ -124,15 +128,25 @@ pc.tree1     <- sum(diag(hits.tree1))/sum(hits.tree1) # percent correct
 
 
 #hw4 deliverables
-holdPClogit <- c(holdPClogit, pc.logit)
-holdMedBRlogit <- c(holdMedBRlogit, median(risk.logit))
-hold75BRlogit <- c(hold75BRlogit, as.numeric(quantile(risk.logit, .75)))
-holdPCtree10 <- c(holdPCtree10, pc.tree10)
-holdMedBRtree10 <- c(holdMedBRtree10, median(risk.tree10))
-hold75BRtree10 <- c(hold75BRtree10, as.numeric(quantile(risk.tree10, .75)))
-holdPCtree1 <- c(holdPCtree1, pc.tree1)
-holdMedBRtree1 <- c(holdMedBRtree1, median(risk.tree1))
-hold75BRtree1 <- c(hold75BRtree1, as.numeric(quantile(risk.tree1, .75)))
+# holdPClogit <- c(holdPClogit, pc.logit)
+# holdMedBRlogit <- c(holdMedBRlogit, median(risk.logit))
+# hold75BRlogit <- c(hold75BRlogit, as.numeric(quantile(risk.logit, .75)))
+# holdPCtree10 <- c(holdPCtree10, pc.tree10)
+# holdMedBRtree10 <- c(holdMedBRtree10, median(risk.tree10))
+# hold75BRtree10 <- c(hold75BRtree10, as.numeric(quantile(risk.tree10, .75)))
+# holdPCtree1 <- c(holdPCtree1, pc.tree1)
+# holdMedBRtree1 <- c(holdMedBRtree1, median(risk.tree1))
+# hold75BRtree1 <- c(hold75BRtree1, as.numeric(quantile(risk.tree1, .75)))
+# ci_logit <- c(ci_logit,confint(pc.logit))
+# ci_tree10 <- c(ci_tree10,confint(pc.tree10))
+# ci_tree <- c(ci_tree,confint(pc.tree1))
 }
 
-source('validate.txt', echo=T)
+#source('validate.txt', echo=T)
+n <- 5000
+x <- as.vector(diag(hits.tree10))/n
+xm <- mean(x)
+xs <- sd(x)
+e <- qnorm(0.975)*xs/sqrt(n)
+xm-e
+xm+e
