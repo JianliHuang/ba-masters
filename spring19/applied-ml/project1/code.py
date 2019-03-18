@@ -38,32 +38,5 @@ x_test_reg = scaler.transform(x_test_reg)
 x_train_class = scaler.fit_transform(x_train_class)
 x_test_class = scaler.transform(x_test_class)
 
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.model_selection import GridSearchCV
+#Regression Analysis
 
-knn = KNeighborsClassifier()
-param_grid = {'n_neighbors':[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]}
-grid_search = GridSearchCV(knn, param_grid, scoring='recall_weighted', return_train_score=True)
-grid_search.fit(x_train_class, y_train_class.values.ravel())
-
-
-print(grid_search.best_params_)
-print(grid_search.best_score_)
-results = pd.DataFrame(grid_search.cv_results_)
-results
-
-knn = KNeighborsClassifier(n_neighbors = 1)
-knn.fit(x_train_class, y_train_class)
-
-from sklearn.metrics import recall_score, accuracy_score
-
-y_train_predict = knn.predict(x_train_class)
-print('Accuracy of Training: {:.2f}'.format(accuracy_score(y_train_class, y_train_predict)))
-y_predict = knn.predict(x_test_class)
-print('Accuracy: {:.2f}'.format(accuracy_score(y_test_class, y_predict)))
-print('Recall: {:.5f}'.format(recall_score(y_test_class, y_predict, average="weighted")))
-
-
-from sklearn.metrics import classification_report
-
-print(classification_report(y_test_class, y_predict))
