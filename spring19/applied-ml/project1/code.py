@@ -1,6 +1,34 @@
 import pandas as pd
 import numpy as np
-raw_data = pd.read_csv('audit_risk.csv')
+#raw_data = pd.read_csv('audit_risk.csv')
+d1 = pd.read_csv('audit_risk.csv')
+d2 = pd.read_csv('trial.csv')
+
+#merging datasets
+print(d1.shape)
+print(d2.shape)
+print(list(d1),'\n')
+print(list(d2))
+
+print('Sector_score: ',sum(d1['Sector_score']==d2['Sector_score']))
+print('LOCATION_ID: ',sum(d1['LOCATION_ID']==d2['LOCATION_ID']))
+print('PARA_A: ',sum(d1['PARA_A']==d2['PARA_A']))
+print('Score_A: ',sum(d1['Score_A']==d2['SCORE_A']))
+print('PARA_B: ',sum(d1['PARA_B']==d2['PARA_B']))
+print('Score_B: ',sum(d1['Score_B']==d2['SCORE_B']))
+print('TOTAL: ',sum(d1['TOTAL']==d2['TOTAL']))
+print('numbers: ',sum(d1['numbers']==d2['numbers']))
+print('Money_Value: ',sum(d1['Money_Value']==d2['Money_Value']))
+print('History: ',sum(d1['History']==d2['History']))
+print('Score: ',sum(d1['Score']==d2['Score']))
+print('Risk: ',sum(d1['Risk']==d2['Risk']))
+
+d2.drop(['Sector_score','LOCATION_ID','PARA_A','PARA_B','TOTAL','numbers','History','Score'],axis=1)
+
+
+
+
+raw_data = pd.concat([d1,d2],axis=1)
 
 ## Data Preview
 raw_data.head()
