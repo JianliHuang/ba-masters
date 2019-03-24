@@ -1,0 +1,256 @@
+###
+#
+# Simulate data (5 clusters training, 6 clusters testing)
+#
+# use mahalanodis distance to check cluster membership probability in testing set
+#
+# Note: several different ways to accomplish the same objective are presented in this code
+#       it could also be informative to wrap system.time() around examples to compare
+#       computational efficiency
+###
+#
+# history
+#
+#     20180313     wlj     most recent version
+#     20180923     wlj     move from loops to function call
+#     20180924     wlj     add boxplot() and hist() to training set (kd)
+#     20190201     wlj     add non-looping k-means version that does scale (memory footprint)
+#                          include comparison of scale v. no-scale results (good compare)
+#     20190202     wlj     add looping k-means version with very small memory footprint
+#                          add first-oreder differencing of TWSS and scaling thereof
+#
+###
+
+library(tidyverse)
+library(broom)
+
+# parameterization
+minClusters        <- 1
+maxClusters        <- 10
+rngSeed            <- 1
+byRows             <- 1  # for use with apply()
+byCols             <- 2  # for use with apply()
+
+# initialize RNG
+set.seed(rngSeed)
+
+# training set characteristics (group labels, group sizes, and means for each component variable)
+centers <- data.frame( grps  = 1:5,
+                       gsize = c(1000, 500, 750, 900, 800),
+                       m1    = c(  -2,  -1,   0,   1,   2),
+                       m2    = c(   0,   3,   1,   2,   4),
+                       m3    = c(   1,   4,   2,   5,  -1),
+                       m4    = c(   2,  -3,   4,  -1,   1) )
+
+# testing set characteristics (same structure as training set)
+c2      <- data.frame( grps  = 1:6,
+                       gsize = c( 100, 100, 100, 100, 100, 100),
+                       m1    = c(  -2,  -1,   0,   1,   2,   4),
+                       m2    = c(   0,   3,   1,   2,   4,   6),
+                       m3    = c(   1,   4,   2,   5,  -1,   7),
+                       m4    = c(   2,  -3,   4,   -1,  1,   8) )
+
+# training set generation
+kd      <- centers        %>%
+           group_by(grps) %>%
+           do(data.frame( v1= rnorm(.$gsize[1], .$m1[1]),
+                          v2= rnorm(.$gsize[1], .$m2[1]),
+                          v3= rnorm(.$gsize[1], .$m3[1]),
+                          v4= rnorm(.$gsize[1], .$m4[1])) ) 
+
+# testing set generation (note differences in structure)
+kd2     <- c2             %>%
+           group_by(grps) %>%
+           do(data.frame( v1= rnorm(.$gsize[1], .$m1[1]),
+                          v2= rnorm(.$gsize[1], .$m2[1]),
+                          v3= rnorm(.$gsize[1], .$m3[1]),
+                          v4= rnorm(.$gsize[1], .$m4[1])) ) 
+
+# reset seed
+set.seed(rngSeed)
+
+# kmeans for minClusters to maxClusters clusters (training set) [ caution: does not scale well (memory) ]
+kclust  <- kd                                   %>%
+           crossing(k= minClusters:maxClusters) %>%
+           group_by(k)                          %>%
+           do(clust= kmeans(select(., v1, v2, v3, v4), .$k[1], nstart=5) )
+
+
+# extract kmeans results information
+clusters    <- kclust  %>% tidy(clust)
+assignments <- kclust  %>% augment(clust, kd)
+clusterings <- kclust  %>% glance(clust)
+
+# reset seed again
+set.seed(rngSeed)
+
+# again, kmeans for minClusters to maxClusters (training set) [ this version DOES scale ]
+kdt      <- as.data.frame(kd)                        # change class from "grouped_df", could re-use name
+kct      <- data.frame(k=minClusters:maxClusters) %>%
+            group_by(k)                           %>%
+            do(clust=kmeans(select(kdt,v1,v2,v3,v4), .$k[1], nstart=5) )
+
+# extract kmeans results information
+clusters2    <- kct  %>% tidy(clust)
+assignments2 <- kct  %>% augment(clust, kd)
+clusterings2 <- kct  %>% glance(clust)
+
+# check for equaivalence [ all TRUE ]
+all.equal(clusters   , clusters2   )
+all.equal(assignments, assignments2)
+all.equal(clusterings, clusterings2)
+
+# looping style for this same problem; code is still short and memory footprint is VERY small
+# also: re-initialization of RNG allows for reproduceability which was not available in the
+#       non-looping examples
+#
+# notice use of "kdt" rather than "kd"
+
+kmTWSS      <- rep(-1,maxClusters)   # initialize to illegal value for subsequent sanity check
+
+for (k in minClusters:maxClusters){ 
+     set.seed(rngSeed)
+     kmTWSS[k]  <- kmeans(select(kdt,v1,v2,v3,v4), k, nstart=5)$tot.withinss
+     }
+
+plot(clusterings$k, clusterings$tot.withinss)
+
+# function for first-order differencing and scaling (parameter is a vector)
+d1Calc        <- function(v) {
+      n       <- length(v)
+      d1      <- v[1:(n-1)] - v[2:n]         # first order differences
+      d1scale <- d1/max(d1)                  # relative scale
+      return (list(d1      = d1,
+                   d1scale = d1scale) )
+      }
+
+kmTd  <- d1Calc(kmTWSS)
+kmTd                      # d1Scale has big changes at 3 and 5 
+
+# cluster assignments for 5 cluster case (based on plot)
+t           <- kclust$clust[5]
+t2          <- t[[1]]
+tmp         <- kd
+tmp$cluster <- t2$cluster
+
+# compare original and discovered clusters; extra parenthesis gets result printed immediately
+(tbl         <- table(tmp$grps, tmp$cluster) )
+
+# table results:
+#
+#   
+#      1   2   3   4   5
+#  1 934   1   2   2  61
+#  2   0  23 477   0   0
+#  3  38   2   0   3 707
+#  4   0 839  60   0   1
+#  5   2   1   1 793   3
+#
+# these are hard-coded
+pc_correct <- (934+477+707+839+793)/3950
+# [1] 0.9493671
+#
+# algorithmically: (sum of row max)/ total give pc_correct
+sum(apply(tbl,byRows,max))/sum(tbl)
+
+# prep for mahalanobis distance [ updated ]
+# uses scale() to get means and std.dev; no loops
+variability <- function(df) {
+     df$cluster <- NULL
+     df$grps    <- NULL
+     n          <- nrow(df)
+     df2        <- scale(df, center=T, scale=T)  # convert to Z w/ local mean and std.dev
+     sscp       <- t(df2) %*% df2                # X'X
+     vcvinv     <- solve((1/(n-1)) * sscp)       # inverse of variance-covariance matrix
+     return( list(n      = n,
+                  avg    = attr(df2, "scaled:center"),
+                  sdev   = attr(df2, "scaled:scale"),
+                  vcvinv = vcvinv )
+            )
+     }
+
+# calculate and retain summary information for each existing cluster
+mhWork   <- tmp                       %>%
+            group_by(cluster)         %>%
+            do( desc=variability(.) )
+
+clusters <- mhWork$cluster
+desc     <- mhWork$desc
+
+mhDf     <- length(desc[[1]]$avg)             # degrees of freedom for chi-sq
+
+###
+# calculate mahalanobis distances for training set to check behavior
+###
+# storage space for distances
+d.train  <- matrix( -1,
+                    nrow=nrow(kd),
+                    ncol=length(clusters) )
+
+# clear out "grps", but hold onto it for later use
+kdGrps   <- kd$grps
+kd$grps  <- NULL
+
+# collect Mahalanobis distance for training data across clusters
+for ( i in seq_along(clusters) ) {
+    t            <- desc[[i]]
+    tdf          <- scale(kd, center=t$avg, scale=t$sdev)   # scale to Z w/ orig. cluster dist
+    d.train[, i] <- mahalanobis(tdf, center=F, cov=t$vcvinv, inverted=T)
+    }
+
+# which cluster for each testing observation?
+newClust    <- apply(d.train, byRows, which.min)    # where is the min located? (col num is cluster)
+kd$cluster  <- newClust
+kd$grps     <- kdGrps
+table(kd$grps, kd$cluster)
+
+# chi-squared cdf value for each testing observation
+minStat  <- apply(d.train, byRows, min)             # what is the min value?
+chiSq    <- pchisq(minStat, df=mhDf, lower.tail=F)
+summary(chiSq)
+
+kd$minStat   <- minStat
+kd$chiSq     <- chiSq
+
+# distribution of p-value (tail area) by group for testing sample
+boxplot(chiSq~grps,data=kd)
+
+hist(kd$chiSq)
+
+###
+# calculate mahalanobis distances for testing set to compare behavior
+###
+# storage space for distances
+d2       <- matrix( -1,
+                    nrow=nrow(kd2),
+                    ncol=length(clusters) )
+
+# hold on to "grps" info for accuracy check but remove from kd2 structure
+kd2Grps  <- kd2$grps
+kd2$grps <- NULL
+
+# collect Mahalanobis distance for test data across clusters [ updated ]
+for ( i in seq_along(clusters) ) {
+    t       <- desc[[i]]
+    tdf     <- scale(kd2, center=t$avg, scale=t$sdev)   # scale to Z w/ orig. cluster dist
+    d2[, i] <- mahalanobis(tdf, center=F, cov=t$vcvinv, inverted=T)
+    }
+
+# which cluster for each testing observation?
+newClust    <- apply(d2, byRows, which.min)
+kd2$cluster <- newClust
+kd2$grps    <- kd2Grps
+table(kd2$grps, kd2$cluster)
+
+# chi-squared cdf value for each testing observation
+minStat  <- apply(d2, byRows, min)
+chiSq    <- pchisq(minStat,df=mhDf, lower.tail=F)
+summary(chiSq)
+
+kd2$minStat   <- minStat
+kd2$chiSq     <- chiSq
+
+# distribution of p-value (tail area) by group for testing sample
+boxplot(chiSq~grps,data=kd2)
+
+hist(kd2$chiSq)

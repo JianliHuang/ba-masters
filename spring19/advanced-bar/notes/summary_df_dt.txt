@@ -1,0 +1,70 @@
+###
+#
+# (1) load 2016 TX elections data (General Election) results and VRTO files
+# (2) summarize results by county/VTD [ 10%, 25%, 50%, 75%, 90%, average of high 3 (soft support)
+#     average of low 3 (hard support) ]
+# (3) merge with VTRO
+# (4) save.image()
+# (5) export as CSV for tableau (not currently implemented)
+#
+###
+#
+# History
+#
+# 20181222  initial code (wlj)
+#
+###
+wk        <- "f:/flash_16g/data/2016_version_tx_election/elise"
+setwd(wk)
+
+bulk1     <- "2016_General_Election_Returns.csv"
+bulk2     <- "2016_General_Election_VRTO.csv"
+
+require(tidyverse)
+require(data.table)
+
+dt_load <- system.time({
+raw       <- fread(bulk1)
+vrto      <- fread(bulk2)
+})
+
+# helper functions
+avghi     <- function(df, n) {
+             n <- min(n, nrow(df))
+             t <- sort(df, decreasing=T)
+             return (mean(t[1:n]) )
+             }
+
+avglo     <- function(df, n) {
+             n <- min(n, nrow(df))
+             t <- sort(df, decreasing=F)
+             return (mean(t[1:n]) )
+             }
+
+# initial data size: 333,241 rows
+
+# user: 1056.97 system: 155.36 elapsed: 1214.61 (20.2435 minutes) 14.3/31.9 GB (MS W10)
+df_summarize <- system.time(
+by_cntyvtd_party <- raw                      %>%
+                    group_by(cntyvtd, Party) %>%
+                    summarize(q10=quantile(.$Votes,0.10), q25=quantile(.$Votes,0.25), 
+                              q50=quantile(.$Votes,0.50), q75=quantile(.$Votes,0.75), 
+                              q90=quantile(.$Votes,0.90), 
+                              hi3=avghi(.$Votes,3),       lo3=avglo(.$Votes,3))
+)
+
+# basic use of data.table [filter, do, by] feature w/o index
+# user: 21.78 system: 0.03 elapsed: 21.82 (seconds)  ~55.66499 times faster
+dt_summarize <- system.time(
+dt_cntyvtd_party <- raw[,.(q10=quantile(Votes,0.10), q25=quantile(Votes,0.25), 
+                           q50=quantile(Votes,0.50), q75=quantile(Votes,0.75), 
+                           q90=quantile(Votes,0.90), 
+                           hi3=avghi(Votes,3),       lo3=avglo(Votes,3)),
+                           by=.(cntyvtd,Party) ]
+)
+
+# final data size (output): 44,792 rows
+
+save.image("summarize_df_dt.Rdata")
+
+

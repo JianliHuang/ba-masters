@@ -1,0 +1,20 @@
+###
+#
+# demonstrate score of variables in a user-defined function
+#
+
+# assign a value
+(c <- 3)
+
+# declare and define a function
+a <- function(b) {
+     b <- b+1       # increment the input parameter
+     print(b)       # print the updated value
+     print(c)       # print a value which is NOT a parameter
+     c <- c+2
+     print(c)
+     }
+
+a(c)     # call the function
+c        # did the original value change?
+
