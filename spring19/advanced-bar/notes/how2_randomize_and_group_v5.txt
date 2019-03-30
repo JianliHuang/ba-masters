@@ -1,0 +1,165 @@
+###
+#
+# How to: common tasks demonstrated
+#
+###
+#
+# History
+#          20181016  Initial version (wj)
+#          20181017  updated with additional examples at end
+#          20190214  added comments to multiple groups section
+#          20190313  clean up "10 items in 2 groups"; and comments
+#          20190325  add examples for by-group processing [ new 20190325 ]
+#
+###
+#
+#  data.table needed for some examples
+#
+require(data.table)
+
+###
+#  shuffle data (randomize)
+#
+###
+#
+# Several ways but they all rely on random numbers so
+#
+
+seed <- 1
+
+###
+#
+# use sample()
+#
+# default is replace=F (sampling without replacement)
+#
+#
+set.seed(seed)
+
+( t <- 1:10 )
+( s <- sample(t, length(t)) ) # telling it to sample "n" items from a list of "n" items
+
+set.seed(seed)
+( s <- sample(t) )            # default is: sample "n" items from "n" items
+
+###
+#
+# do it explicitly ( the parens make it look harder than it is )
+#
+# note: results differ from sample()
+#
+#
+set.seed(seed)
+
+( t <- 1:10 )
+( s <- t[order(runif(length(t)))] )
+
+###
+#
+# draw a random subset
+#
+# note: first "n" elements from the earlier use of sample()
+#
+set.seed(seed)
+
+n   <- 5        # size of sample
+( t <- 1:10 )
+( s <- sample(t, n) )
+
+# specify as a fraction rather than a count (at least initially)
+set.seed(seed)
+
+( t      <- 1:10 )
+( pctest <- 0.5 )
+( frac   <- ceiling(length(t)*pctest))
+( s      <- sample(t, frac)        )
+
+###
+#
+# divide data into multiple groups
+#
+# note: works easiest if all groups are the same size
+#
+#
+##
+# example: 10 items in 2 groups
+#
+n  <- 10
+g  <- 2                                # "n" is integer multiple of "g"
+rep( 1:g, each=ceiling(n/g) )          # generate values in "runs"
+rep( 1:g, ceiling(n/g) )               # generate values in "cycles"
+                                      
+# 10 items, 3 groups [ gives: 4,4,2 rather than 3,3,4 ]
+n  <- 10
+g  <- 3
+( t <- rep( 1:g, each=ceiling(n/g) ) ) # generates 12 entries rather than 10
+( t <- t[1:n] )                        # keep the first 10 entries, last group is smaller
+table(t)
+
+# "cycles" approach [ gives 4, 3, 3 ]
+(t <- rep(1:g, ceiling(n/g) ) [1:n] )
+table(t)
+
+# example application: by-group processing [ new 20190325 ]
+set.seed(seed)
+x <- runif(n)             # just some numbers to work on
+
+# 1: for() loop [ new 20190325 ]
+avg1 <- rep(NA, g)        # allocate space for each group result
+for (i in 1:g) {
+    data    <- x[t==i]    # find entries for the current group
+    avg1[i] <- mean(data)
+    }
+avg1
+
+# 2: data.table form [ new 20190325 ]
+(dt_x <- data.table(x=x, t=t)           )
+(avg2 <- dt_x[ , .(avg=mean(x)), by=t ] )  # ".()" alias for "list()"
+
+###
+#
+# another function: sample_n() [ dplyr, included in tidyverse ]
+#
+#   sample_n()     user specified observation count
+#   sample_frac()  user specified fraction of total observations
+#
+# note: recognizes group_by() and works within groups
+#       works in tidyverse environment
+#
+# can be adapted to data.table
+#
+
+require(tidyverse)
+
+( t <- crossing(a=1:3, b=4:6) )
+t %>% group_by(a) %>% sample_n(2)
+
+###
+#
+# example: jackknife estimates of mean() [ LOOCV ] See ISLR section 5
+#
+#
+n  <- 5
+t  <- 1:n
+x  <- rep(NA, n)
+
+for ( i in 1:n ) {
+    t2   <- t[ -i ]          # negative index indicates exclusion, generalizes to vector
+    x[i] <- mean(t2) 
+    }
+x
+
+# redo with data.table
+
+# examples (using LOOCV result, above)
+
+mean(t)
+mean( ( x-mean(t) )^2 )      # MSE (mean squared error)
+sd(   ( x-mean(t) )^2 )      
+
+( d    <- x - mean(t) )
+
+( ci95 <- c(0.025, 0.975) )
+quantile(d, probs=ci95)             # 0.95 CI (empirical) 
+
+( t    <- quantile(d, probs=0.5 ) ) # median is zero
