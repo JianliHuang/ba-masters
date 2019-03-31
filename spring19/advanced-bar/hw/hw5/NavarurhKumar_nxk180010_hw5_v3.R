@@ -21,7 +21,10 @@ test_idx <- sample(x,103)
 test_idx <- as.data.table(test_idx)
 colnames(test_idx) <- 'idx'
 test <- setDT(raw)[test_idx, on="idx"]
-train <- raw[!(raw$idx %in% test_idx),]
+train_idx <- raw$idx[-test$idx]
+train_idx <- as.data.table(train_idx)
+colnames(train_idx) <- 'idx'
+train <- setDT(raw)[train_idx, on="idx"]
 
 model <- lm(data = train, strength ~ .-idx)
 resid_simple <- model$residuals
