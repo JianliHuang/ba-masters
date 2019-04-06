@@ -1,6 +1,7 @@
-setwd('c:/data/BUAN6357/HW_5'); source('prep.txt', echo=T)
+#setwd('c:/data/BUAN6357/HW_5'); source('prep.txt', echo=T)
+
 library(data.table)
-raw <- read.table('Concrete_Data_wj.csv',header = T,sep = ',')
+raw <- read.table('~/documents/ba-masters/spring19/advanced-bar/hw/hw5/Concrete_Data_wj.csv',header = T,sep = ',')
 raw$idx <- as.numeric(rownames(raw))
 raw <- as.data.table(raw)
 
@@ -95,5 +96,39 @@ for(i in 1:10)
 # is.data.table(jk_cv)
 # is.data.table(k_m)
 # is.data.table(k_cv)
+#source('validate.txt', echo=T)
 
-source('validate.txt', echo=T)
+#hw5b
+
+mbm <- mean(base_m$resid_base)
+sdbm <- sd(base_m$resid_base)
+lb5 <- mbm - 0.674*sdbm
+ub5 <- mbm + 0.674*sdbm
+lb75 <- mbm - 1.1503494*sdbm
+ub75 <- mbm + 1.1503494*sdbm
+lb95 <- mbm - 1.959964*sdbm
+ub95 <- mbm + 1.959964*sdbm
+ubk5 <- mean(k_m$resid_k) + 0.674*sd(k_m$resid_k)
+ubs5 <- mean(simple_m$resid_simple) + 0.674*sd(simple_m$resid_simple)
+ubs5np <- mean(simple_cv$resid_cv) + 0.674*sd(simple_cv$resid_cv)
+ubs95np <- mean(simple_cv$resid_cv) + 1.959964*sd(simple_cv$resid_cv)
+
+k_cv$flag75 <- 0
+k_cv$flag75[which(k_cv$resid_cv <= ub75 & k_cv$resid_cv >= lb75)] <- 1
+sum(k_cv$flag75)/nrow(k_cv)
+
+simple_cv$flag95 <- 0
+simple_cv$flag95[which(simple_cv$resid_cv <= ub95 & simple_cv$resid_cv >= lb95)] <- 1
+sum(simple_cv$flag95)/nrow(simple_cv)
+
+simple_cv$flag75 <- 0
+simple_cv$flag75[which(simple_cv$resid_cv <= ub75 & simple_cv$resid_cv >= lb75)] <- 1
+sum(simple_cv$flag75)/nrow(simple_cv)
+
+jk_cv$flag5 <- 0
+jk_cv$flag5[which(jk_cv$resid_jk <= ub5 & jk_cv$resid_jk >= lb5)] <- 1
+sum(jk_cv$flag5)/nrow(jk_cv)
+
+jk_cv$flag95 <- 0
+jk_cv$flag95[which(jk_cv$resid_jk <= ub95 & jk_cv$resid_jk >= lb95)] <- 1
+sum(jk_cv$flag95)/nrow(jk_cv)
