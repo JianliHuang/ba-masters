@@ -112,14 +112,19 @@ ubk5 <- mean(k_m$resid_k) + 0.674*sd(k_m$resid_k)
 ubs5 <- mean(simple_m$resid_simple) + 0.674*sd(simple_m$resid_simple)
 ubs5np <- mean(simple_cv$resid_cv) + 0.674*sd(simple_cv$resid_cv)
 ubs95np <- mean(simple_cv$resid_cv) + 1.959964*sd(simple_cv$resid_cv)
+ubk5p <- mean(k_m$resid_k) + 0.674*sd(k_m$resid_k)
 
 k_cv$flag75 <- 0
 k_cv$flag75[which(k_cv$resid_cv <= ub75 & k_cv$resid_cv >= lb75)] <- 1
 sum(k_cv$flag75)/nrow(k_cv)
 
-simple_cv$flag95 <- 0
-simple_cv$flag95[which(simple_cv$resid_cv <= ub95 & simple_cv$resid_cv >= lb95)] <- 1
-sum(simple_cv$flag95)/nrow(simple_cv)
+k_cv$flag95 <- 0
+k_cv$flag95[which(k_cv$resid_cv <= ub95 & k_cv$resid_cv >= lb95)] <- 1
+sum(k_cv$flag95)/nrow(k_cv)
+
+simple_cv$flag5 <- 0
+simple_cv$flag5[which(simple_cv$resid_cv <= ub5 & simple_cv$resid_cv >= lb5)] <- 1
+sum(simple_cv$flag5)/nrow(simple_cv)
 
 simple_cv$flag75 <- 0
 simple_cv$flag75[which(simple_cv$resid_cv <= ub75 & simple_cv$resid_cv >= lb75)] <- 1
@@ -132,3 +137,22 @@ sum(jk_cv$flag5)/nrow(jk_cv)
 jk_cv$flag95 <- 0
 jk_cv$flag95[which(jk_cv$resid_jk <= ub95 & jk_cv$resid_jk >= lb95)] <- 1
 sum(jk_cv$flag95)/nrow(jk_cv)
+
+jk_cv$flag75 <- 0
+jk_cv$flag75[which(jk_cv$resid_jk <= ub75 & jk_cv$resid_jk >= lb75)] <- 1
+sum(jk_cv$flag75)/nrow(jk_cv)
+
+base_m$rank <- rank(base_m$resid_base,ties.method = 'min')
+
+simple_cv$flag95np <- 0
+simple_cv$flag95np[which(simple_cv$resid_cv <= quantile(base_m$resid_base,.975) & simple_cv$resid_cv >= quantile(base_m$resid_base,.025))] <- 1
+sum(simple_cv$flag95np)/nrow(simple_cv)
+
+
+k_cv$flag75np <- 0
+k_cv$flag75np[which(k_cv$resid_cv <= quantile(base_m$resid_base,.875)  & k_cv$resid_cv >= quantile(base_m$resid_base,.125))] <- 1
+sum(k_cv$flag75np)/nrow(k_cv)
+
+jk_cv$flag5np <- 0
+jk_cv$flag5np[which(jk_cv$resid_jk <= quantile(base_m$resid_base,.75) & jk_cv$resid_jk >= quantile(base_m$resid_base,.25))] <- 1
+sum(jk_cv$flag5np)/nrow(jk_cv)
