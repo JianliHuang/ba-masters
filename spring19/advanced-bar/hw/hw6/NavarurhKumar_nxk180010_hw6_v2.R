@@ -1,10 +1,8 @@
-setwd('c:/data/BUAN6357/HW_6'); source('prep.txt', echo=T)
-
 library(tidyverse)
 library(broom)
 library(data.table)
 
-raw <- read.table('Concrete_Data_wj.csv',header = T,sep = ',')
+raw <- read.table('Work/ba-masters/spring19/advanced-bar/hw/hw6/Concrete_Data_wj.csv',header = T,sep = ',')
 raw <- as.data.table(raw)
 mod <- tidy(lm(data=raw, strength~.))
 m1 <- as.data.table(mod)
@@ -45,4 +43,23 @@ dt2 <- data.table(x=x, y=y)
 d5dt <- dt2[ , tidy(lm(strength ~ . , data = raw[x,])), by = y]
 d5dt$y <- NULL
 
-source('validate.txt', echo=T)
+#6b
+mean(d3dt$estimate[which(d3dt$term == 'water')])
+0.674
+1.1503494
+1.959964
+
+mean(d3dt$estimate[which(d3dt$term == 'water')])
++ 1.959964*sd(d3dt$estimate[which(d3dt$term == 'water')])
+
+mean(d2f$estimate[which(d2f$term == 'slag')])
+- 1.959964*sd(d2f$estimate[which(d2f$term == 'slag')])
+
+mean(d5dt$estimate[which(d5dt$term == 'fine_agg')])
++ 1.1503494*sd(d5dt$estimate[which(d5dt$term == 'fine_agg')])
+
+mean(d2f$estimate[which(d2f$term == 'ash')])
++ 1.1503494*sd(d2f$estimate[which(d2f$term == 'ash')])
+
+mean(d2f$estimate[which(d2f$term == 'days')])
+- 1.959964*sd(d2f$estimate[which(d2f$term == 'days')])
